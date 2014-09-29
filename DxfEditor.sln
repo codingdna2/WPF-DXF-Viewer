@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DxfEditor", "DxfEditor\DxfEditor.csproj", "{38B12E17-6974-4514-A892-0F820066B901}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXFLib", "DXFLib\DXFLib.csproj", "{476FA4C4-FA1D-4A2A-985B-8CBF50F82251}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{10EB7E91-6E50-4B0A-8943-740DAB10168E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomableCanvas", "ZoomableCanvas\ZoomableCanvas.csproj", "{962F5736-02ED-452A-9950-1A9A419ED4B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38B12E17-6974-4514-A892-0F820066B901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38B12E17-6974-4514-A892-0F820066B901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38B12E17-6974-4514-A892-0F820066B901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38B12E17-6974-4514-A892-0F820066B901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{476FA4C4-FA1D-4A2A-985B-8CBF50F82251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{476FA4C4-FA1D-4A2A-985B-8CBF50F82251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{476FA4C4-FA1D-4A2A-985B-8CBF50F82251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{476FA4C4-FA1D-4A2A-985B-8CBF50F82251}.Release|Any CPU.Build.0 = Release|Any CPU
+		{962F5736-02ED-452A-9950-1A9A419ED4B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{962F5736-02ED-452A-9950-1A9A419ED4B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{962F5736-02ED-452A-9950-1A9A419ED4B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{962F5736-02ED-452A-9950-1A9A419ED4B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{476FA4C4-FA1D-4A2A-985B-8CBF50F82251} = {10EB7E91-6E50-4B0A-8943-740DAB10168E}
+		{962F5736-02ED-452A-9950-1A9A419ED4B3} = {10EB7E91-6E50-4B0A-8943-740DAB10168E}
+	EndGlobalSection
+EndGlobal
