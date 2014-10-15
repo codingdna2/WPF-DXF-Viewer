@@ -27,8 +27,8 @@ namespace DxfEditor
     /// </summary>
     public partial class MainWindow : Window
     {
-        private float scaleX = .05f;
-        private float scaleY = .05f;
+        private float scaleX = 0.05f;
+        private float scaleY = 0.05f;
 
         // DXF Document
         DXFLib.DXFDocument doc;
@@ -65,7 +65,7 @@ namespace DxfEditor
                 foreach (Shape shape in background)
                     canvas.Children.Add(shape);
 
-                Autofill();
+                Autofill();                
             }
         }
 
@@ -139,7 +139,7 @@ namespace DxfEditor
 
                     IList<Shape> shapes = new List<Shape>();
                     foreach (DXFLib.DXFEntity entity in doc.Entities)
-                        ConvertDxfEntityToShapes(doc, entity, shapes);
+                        ConvertDxfEntityToShapes(doc, entity, shapes, System.Windows.Media.Brushes.SteelBlue);                        
 
                     System.Diagnostics.Debug.WriteLine("Created shapes in {0}ms", DateTime.UtcNow.Subtract(start).TotalMilliseconds);
 
@@ -150,53 +150,56 @@ namespace DxfEditor
             return null;
         }
 
-        private void ConvertDxfEntityToShapes(DXFLib.DXFDocument doc, DXFLib.DXFEntity entity, IList<Shape> shapes)
+        private void ConvertDxfEntityToShapes(DXFLib.DXFDocument doc, DXFLib.DXFEntity entity, IList<Shape> shapes, System.Windows.Media.Brush stroke)
         {
             if (entity is DXFLib.DXFLine)
             {
                 DXFLib.DXFLine line = (DXFLib.DXFLine)entity;
-                PointF start = new PointF((float)line.Start.X, (float)line.Start.Y);
-                PointF end = new PointF((float)line.End.X, (float)line.End.Y);
+                PointF start = new PointF((float)line.Start.X, (float)-line.Start.Y);
+                PointF end = new PointF((float)line.End.X, (float)-line.End.Y);
 
                 Line drawLine = new Line();
-                drawLine.Stroke = System.Windows.Media.Brushes.SteelBlue;
+                drawLine.Stroke = stroke;
                 drawLine.X1 = end.X * scaleX;
                 drawLine.X2 = start.X * scaleX;
                 drawLine.Y1 = end.Y * scaleY;
                 drawLine.Y2 = start.Y * scaleY;
                 drawLine.StrokeThickness = 1;
                 drawLine.IsHitTestVisible = false;
-
+                
                 shapes.Add(drawLine);
             }
             else if (entity is DXFLib.DXFCircle)
             {
+                
                 DXFLib.DXFCircle circle = (DXFLib.DXFCircle)entity;
                 Ellipse drawCircle = new Ellipse();
                 drawCircle.StrokeThickness = 1;
-                drawCircle.Stroke = System.Windows.Media.Brushes.SteelBlue;
+                drawCircle.Stroke = stroke;
                 drawCircle.Width = circle.Radius * 2 * scaleX;
                 drawCircle.Height = circle.Radius * 2 * scaleY;
-                drawCircle.Margin = new Thickness((circle.Center.X.Value - circle.Radius) * scaleX, (circle.Center.Y.Value - circle.Radius) * scaleY, 0, 0);
                 drawCircle.IsHitTestVisible = false;
+                Canvas.SetLeft(drawCircle, (circle.Center.X.Value - circle.Radius) * scaleX);
+                Canvas.SetTop(drawCircle, (-circle.Center.Y.Value - circle.Radius) * scaleY);
 
                 shapes.Add(drawCircle);
+                 
             }
             else if (entity is DXFLib.DXFArc)
             {
                 DXFLib.DXFArc arc = (DXFLib.DXFArc)entity;
 
                 Path path = new Path();
-                path.Stroke = System.Windows.Media.Brushes.SteelBlue;
+                path.Stroke = stroke;
                 path.StrokeThickness = 1;
 
                 System.Windows.Point endPoint = new System.Windows.Point(
                     (arc.Center.X.Value + Math.Cos(arc.EndAngle * Math.PI / 180) * arc.Radius) * scaleX,
-                    (arc.Center.Y.Value + Math.Sin(arc.EndAngle * Math.PI / 180) * arc.Radius) * scaleY);
+                    (-arc.Center.Y.Value - Math.Sin(arc.EndAngle * Math.PI / 180) * arc.Radius) * scaleY);
 
                 System.Windows.Point startPoint = new System.Windows.Point(
                     (arc.Center.X.Value + Math.Cos(arc.StartAngle * Math.PI / 180) * arc.Radius) * scaleX,
-                    (arc.Center.Y.Value + Math.Sin(arc.StartAngle * Math.PI / 180) * arc.Radius) * scaleY);
+                    (-arc.Center.Y.Value - Math.Sin(arc.StartAngle * Math.PI / 180) * arc.Radius) * scaleY);
 
                 ArcSegment arcSegment = new ArcSegment();
                 double sweep = 0.0;
@@ -207,7 +210,7 @@ namespace DxfEditor
                 arcSegment.IsLargeArc = sweep >= 180;
                 arcSegment.Point = endPoint;
                 arcSegment.Size = new System.Windows.Size(arc.Radius * scaleX, arc.Radius * scaleY);
-                arcSegment.SweepDirection = arc.ExtrusionDirection.Z >= 0 ? SweepDirection.Clockwise : SweepDirection.Counterclockwise;
+                arcSegment.SweepDirection = arc.ExtrusionDirection.Z >= 0 ? SweepDirection.Counterclockwise : SweepDirection.Clockwise;
 
                 PathGeometry geometry = new PathGeometry();
                 PathFigure pathFigure = new PathFigure();
@@ -230,13 +233,13 @@ namespace DxfEditor
                     DXFLib.DXFVertex vertex1 = (i == polyLine.Children.Count) ? (DXFLib.DXFVertex)polyLine.Children[0] : (DXFLib.DXFVertex)polyLine.Children[i];
                     DXFLib.DXFVertex vertex2 = (DXFLib.DXFVertex)polyLine.Children[i - 1];
 
-                    PointF start = new PointF((float)vertex1.Location.X, (float)vertex1.Location.Y);
-                    PointF end = new PointF((float)vertex2.Location.X, (float)vertex2.Location.Y);
+                    PointF start = new PointF((float)vertex1.Location.X, (float)-vertex1.Location.Y);
+                    PointF end = new PointF((float)vertex2.Location.X, (float)-vertex2.Location.Y);
 
                     // TODO: Handle Vertex.Buldge http://www.afralisp.net/archive/lisp/Bulges1.htm
 
                     Line drawLine = new Line();
-                    drawLine.Stroke = System.Windows.Media.Brushes.Blue;
+                    drawLine.Stroke = stroke;
                     drawLine.X1 = end.X * scaleX;
                     drawLine.X2 = start.X * scaleX;
                     drawLine.Y1 = end.Y * scaleY;
@@ -259,11 +262,11 @@ namespace DxfEditor
 
                     // TODO: Handle Element.Bulge http://www.afralisp.net/archive/lisp/Bulges1.htm
 
-                    PointF start = new PointF((float)vertex1.X, (float)vertex1.Y);
-                    PointF end = new PointF((float)vertex2.X, (float)vertex2.Y);
+                    PointF start = new PointF((float)vertex1.X, (float)-vertex1.Y);
+                    PointF end = new PointF((float)vertex2.X, (float)-vertex2.Y);
 
                     Line drawLine = new Line();
-                    drawLine.Stroke = System.Windows.Media.Brushes.Blue;
+                    drawLine.Stroke = stroke;
                     drawLine.X1 = end.X * scaleX;
                     drawLine.X2 = start.X * scaleX;
                     drawLine.Y1 = end.Y * scaleY;
@@ -285,19 +288,51 @@ namespace DxfEditor
             }
             else if (entity is DXFLib.DXFInsert)
             {
-                //DXFLib.DXFInsert insert = (DXFLib.DXFInsert)entity;
-                //DXFLib.DXFBlock block = doc.Blocks.FirstOrDefault(x => x.BlockName == insert.BlockName);
-                //if (block != null)
-                //{
-                //    foreach (DXFLib.DXFEntity blockEntity in block.Children)
-                //        AddEntity(doc, blockEntity);
-                //}
+                return;
+
+                // THIS FUNCTION STILL HAVE SOME PROBLEMS
+                DXFLib.DXFInsert insert = (DXFLib.DXFInsert)entity;
+                DXFLib.DXFBlock block = doc.Blocks.FirstOrDefault(x => x.BlockName == insert.BlockName);
+                if (block != null && block.HasChildren && !block.IsInvisible)
+                {
+                    IList<Shape> blockEntities = new List<Shape>();
+                    foreach (DXFLib.DXFEntity blockEntity in block.Children)
+                        ConvertDxfEntityToShapes(doc, blockEntity, blockEntities, System.Windows.Media.Brushes.Red);
+
+                    double centerX = insert.InsertionPoint.X.Value * scaleX;
+                    double centerY = -insert.InsertionPoint.Y.Value * scaleY;
+
+                    foreach (Shape shape in blockEntities)
+                    {
+                        TranslateTransform translateTransform1 = new TranslateTransform(centerX, centerY);
+                        RotateTransform rotateTransform1 = new RotateTransform(insert.RotationAngle.HasValue ? insert.RotationAngle.Value : 0, centerX, centerY);
+                        ScaleTransform scaleTransform1 = null;
+
+                        if ((insert.Scaling.X.HasValue && insert.Scaling.X.Value < 100) || (insert.Scaling.Y.HasValue && insert.Scaling.Y.Value < 100))
+                            scaleTransform1 = new ScaleTransform(insert.Scaling.X.HasValue ? insert.Scaling.X.Value : 1, insert.Scaling.Y.HasValue ? insert.Scaling.Y.Value : 1, centerX, centerY);
+                        //else if (System.Diagnostics.Debugger.IsAttached)
+                        //    System.Diagnostics.Debugger.Break();
+                        
+                        // Create a TransformGroup to contain the transforms 
+                        TransformGroup myTransformGroup = new TransformGroup();
+                        myTransformGroup.Children.Add(translateTransform1);
+                        myTransformGroup.Children.Add(rotateTransform1);
+
+                        if (scaleTransform1 != null)
+                            myTransformGroup.Children.Add(scaleTransform1);
+
+                        shape.RenderTransform = myTransformGroup; 
+                        shapes.Add(shape);
+                    }
+                }
             }
             else if (entity is DXFLib.DXFSolid)
             {
             }
             else if (entity is DXFLib.DXFText)
             {
+                DXFLib.DXFText dxfText = (DXFLib.DXFText)entity;
+
             }
             else if (entity is DXFLib.DXFTrace)
             {
@@ -329,18 +364,17 @@ namespace DxfEditor
             double minTop = canvas.Children.OfType<Line>().Min(i => Math.Min(i.Y1, i.Y2));
             double maxTop = canvas.Children.OfType<Line>().Max(i => Math.Max(i.Y1, i.Y2));
 
-            // Adjust scale
+            // Calculate scale
             double scale = Math.Min(canvas.ActualWidth / (maxLeft - minLeft), canvas.ActualHeight / (maxTop - minTop)) * 0.95;
             if (scale > 0)
             {
-                double centerX = (maxLeft - minLeft) * scale;
-                double centerY = (maxTop - minTop) * scale;
+                // Adjust scale
                 canvas.Scale = scale;
 
                 // Adjust offset
-                canvas.Offset = new System.Windows.Point(minLeft * scale - (canvas.ActualWidth - (maxLeft - minLeft) * scale) / 2, minTop * scale - (canvas.ActualHeight - ((maxTop - minTop) * scale)) / 2);
+                canvas.Offset = new System.Windows.Point(minLeft * scale - (canvas.ActualWidth - (maxLeft - minLeft) * scale) / 2, 
+                    minTop * scale - (canvas.ActualHeight - ((maxTop - minTop) * scale)) / 2);
             }
-
         }
 
         private void ZoomIn()

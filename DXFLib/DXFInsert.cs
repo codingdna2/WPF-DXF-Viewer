@@ -43,6 +43,9 @@ namespace DXFLib
                 case 43:
                     Scaling.Z = double.Parse(value);
                     break;
+                case 50:
+                    RotationAngle = double.Parse(value);
+                    break;
             }
         }
     }

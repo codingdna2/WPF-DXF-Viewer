@@ -82,6 +82,7 @@
     <Compile Include="DXFSpline.cs" />
     <Compile Include="DXFStyleRecord.cs" />
     <Compile Include="DXFTables.cs" />
+    <Compile Include="DXFText.cs" />
     <Compile Include="DXFTolerance.cs" />
     <Compile Include="DXFTrace.cs" />
     <Compile Include="DXFUCSRecord.cs" />

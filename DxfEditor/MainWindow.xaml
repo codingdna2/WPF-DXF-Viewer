@@ -3,15 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+        <!-- Columns and Rows definition -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
-        <ToolBarTray  Grid.Row="0">
+        <!-- Row 1 -->
+        <ToolBarTray Grid.Row="0">
             <ToolBar>
                 <Label Content="DXF Editor:"/>
                 <Button Click="OnClickOpen" RenderOptions.BitmapScalingMode="NearestNeighbor">
@@ -34,12 +37,15 @@
                 <Label Content="0; 0" x:Name="lblPosition"/>
             </ToolBar>
         </ToolBarTray>
+
+        <!-- Row 2 -->
         <Grid Grid.Row="1" ClipToBounds="True" Background="White">
             <ZoomableCanvas x:Name="canvas" Scale="1" Offset="0,0" Background="Transparent">
-                <ZoomableCanvas.LayoutTransform>
+                <!--<ZoomableCanvas.LayoutTransform>
                     <ScaleTransform ScaleX="1" ScaleY="-1" CenterX=".5" CenterY=".5" />
-                </ZoomableCanvas.LayoutTransform>
+                </ZoomableCanvas.LayoutTransform>-->
             </ZoomableCanvas>
         </Grid>
+        
     </Grid>
 </Window>

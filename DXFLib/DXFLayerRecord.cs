@@ -10,6 +10,11 @@ namespace DXFLib
         public string LayerName { get; set; }
         public int Color { get; set; }
         public string LineType { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("Name:{0} LineType:{1}", LayerName, LineType);
+        }
     }
 
     class DXFLayerRecordParser : DXFRecordParser

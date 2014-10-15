@@ -11,6 +11,11 @@ namespace DXFLib
         public string Description { get; set; }
         public int AlignmentCode { get; set; }
 
+        public override string ToString()
+        {
+            return string.Format("{0} ({1}) ({2})", LineTypeName, Description, AlignmentCode);
+        }
+
         [Flags]
         public enum ElementFlags
         {

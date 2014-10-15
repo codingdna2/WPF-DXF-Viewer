@@ -15,7 +15,7 @@ namespace DXFLib
 
         public override string ToString()
         {
-            return BlockName;
+            return string.Format("{0} ({1} child)", BlockName, HasChildren ? Children.Count : 0);
         }
 
         public override void ParseGroupCode(int groupcode, string value)

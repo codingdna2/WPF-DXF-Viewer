@@ -9,6 +9,11 @@ namespace DXFLib
     {
         public string StyleName { get; set; }
         //TODO: weitere Felder unterstützen
+
+        public override string ToString()
+        {
+            return StyleName;
+        }
     }
 
     class DXFDimStyleRecordParser : DXFRecordParser

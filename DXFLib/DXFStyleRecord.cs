@@ -11,6 +11,12 @@ namespace DXFLib
         public double FixedHeight { get; set; }
         public double WidthFactor { get; set; }
         public double ObliqueAngle { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0} ({1}) ({2})", StyleName, FixedHeight, WidthFactor);
+        }
+
         [Flags]
         public enum TextGenerationFlags
         {

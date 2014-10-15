@@ -102,11 +102,6 @@ namespace DXFLib
     {
     }
 
-    [Entity("TEXT")]
-    public class DXFText : DXFGenericEntity
-    {
-    }
-
     [Entity("VIEWPORT")]
     public class DXFViewPort : DXFGenericEntity
     {

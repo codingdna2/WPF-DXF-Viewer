@@ -14,6 +14,11 @@ namespace DXFLib
         public DXFPoint XAxis { get { return xaxis; } }
         private DXFPoint yaxis = new DXFPoint();
         public DXFPoint YAxis { get { return yaxis; } }
+
+        public override string ToString()
+        {
+            return string.Format("{0} Origin:{1}", UCSName, Origin);
+        }
     }
 
     class DXFUCSRecordParser : DXFRecordParser

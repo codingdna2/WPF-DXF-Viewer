@@ -29,19 +29,19 @@ $INSBASE
   9
 $EXTMIN
  10
-5227.000000000013
+5225.660852506043
  20
-7314.499999999999
+7311.273981422913
  30
-0.0
+-0.0015258207003583
   9
 $EXTMAX
  10
-56438.51361557598
+56444.54203060899
  20
-58163.58851828931
+58165.36366557066
  30
-0.0
+0.0000000349246037
   9
 $LIMMIN
  10
@@ -493,19 +493,19 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2456793.703750069
+2456931.699511285
   9
 $TDUUPDATE
  40
-2456793.620416736
+2456931.616177952
   9
 $TDINDWG
  40
-0.0531589236
+0.0544825694
   9
 $TDUSRTIMER
  40
-0.0531529167
+0.0544763773
   9
 $USRTIMER
  70
@@ -545,7 +545,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-40A6
+40EA
   9
 $SURFTAB1
  70
@@ -929,7 +929,7 @@ $FINGERPRINTGUID
   9
 $VERSIONGUID
   2
-{6130CFC0-6F7E-4859-873A-879B75CA1E4E}
+{1A50FEDC-39B6-4F64-AD32-5FC9C28A4A2F}
   9
 $EXTNAMES
 290
@@ -1159,7 +1159,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1175,7 +1175,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1191,7 +1191,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1207,7 +1207,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1223,7 +1223,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        7
+        0
 280
      0
 281
@@ -1271,7 +1271,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1287,7 +1287,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-       12
+        0
 280
      0
 281
@@ -1303,7 +1303,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1319,7 +1319,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1335,7 +1335,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1351,7 +1351,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        2
+        0
 280
      0
 281
@@ -1367,7 +1367,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1383,7 +1383,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1399,7 +1399,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1415,7 +1415,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1431,7 +1431,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1447,7 +1447,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1463,7 +1463,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-       11
+        0
 280
      0
 281
@@ -1479,7 +1479,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1495,7 +1495,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1511,7 +1511,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1527,7 +1527,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        2
+        0
 280
      0
 281
@@ -1543,7 +1543,7 @@ AecBaseEx70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1559,7 +1559,7 @@ AecBaseEx70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk
  90
       129
  91
-        3
+        0
 280
      0
 281
@@ -1575,7 +1575,7 @@ AecBaseEx70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1591,7 +1591,7 @@ AecBaseEx70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1607,7 +1607,7 @@ AecBaseEx70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk
  90
       129
  91
-        3
+        0
 280
      0
 281
@@ -1623,7 +1623,7 @@ AecBaseEx70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1639,7 +1639,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1655,7 +1655,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1671,7 +1671,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1687,7 +1687,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1703,7 +1703,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1719,7 +1719,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1735,7 +1735,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1751,7 +1751,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1767,7 +1767,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1783,7 +1783,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1799,7 +1799,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1815,7 +1815,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1831,7 +1831,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1847,7 +1847,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1863,7 +1863,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1879,7 +1879,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1895,7 +1895,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1911,7 +1911,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1927,7 +1927,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1943,7 +1943,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       893
  91
-        1
+        0
 280
      0
 281
@@ -1959,7 +1959,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1975,7 +1975,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -1991,7 +1991,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2007,7 +2007,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2023,7 +2023,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2039,7 +2039,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2055,7 +2055,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        3
+        0
 280
      0
 281
@@ -2071,7 +2071,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2087,7 +2087,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        9
+        0
 280
      0
 281
@@ -2103,7 +2103,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2119,7 +2119,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2135,7 +2135,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2151,7 +2151,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        4
+        0
 280
      0
 281
@@ -2167,7 +2167,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2183,7 +2183,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2199,7 +2199,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2215,7 +2215,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2231,7 +2231,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2247,7 +2247,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2263,7 +2263,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2279,7 +2279,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2295,7 +2295,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2311,7 +2311,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2327,7 +2327,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2343,7 +2343,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2359,7 +2359,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        2
+        0
 280
      0
 281
@@ -2375,7 +2375,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2391,7 +2391,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2407,7 +2407,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2423,7 +2423,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2439,7 +2439,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2455,7 +2455,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2471,7 +2471,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        5
+        0
 280
      0
 281
@@ -2487,7 +2487,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2503,7 +2503,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2519,7 +2519,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2535,7 +2535,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2551,7 +2551,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2567,7 +2567,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2583,7 +2583,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2599,7 +2599,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        3
+        0
 280
      0
 281
@@ -2615,7 +2615,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2631,7 +2631,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        3
+        0
 280
      0
 281
@@ -2711,7 +2711,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2727,7 +2727,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2743,7 +2743,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2759,7 +2759,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        4
+        0
 280
      0
 281
@@ -2775,7 +2775,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2791,7 +2791,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2807,7 +2807,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2823,7 +2823,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2839,7 +2839,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2855,7 +2855,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        2
+        0
 280
      0
 281
@@ -2871,7 +2871,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2887,7 +2887,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2903,7 +2903,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2919,7 +2919,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2951,7 +2951,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2967,7 +2967,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        4
+        0
 280
      0
 281
@@ -2983,7 +2983,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -2999,7 +2999,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3015,7 +3015,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3031,7 +3031,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3047,7 +3047,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3063,7 +3063,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3079,7 +3079,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        4
+        0
 280
      0
 281
@@ -3095,7 +3095,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3111,7 +3111,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3127,7 +3127,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3143,7 +3143,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3159,7 +3159,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3175,7 +3175,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3191,7 +3191,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3207,7 +3207,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3223,7 +3223,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3239,7 +3239,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        2
+        0
 280
      0
 281
@@ -3255,7 +3255,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3271,7 +3271,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3287,7 +3287,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3303,7 +3303,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3319,7 +3319,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        2
+        0
 280
      0
 281
@@ -3335,7 +3335,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3351,7 +3351,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3367,7 +3367,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        2
+        0
 280
      0
 281
@@ -3383,7 +3383,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3399,7 +3399,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3415,7 +3415,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3431,7 +3431,7 @@ AecSchedule70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3447,7 +3447,7 @@ AecSchedule70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3591,7 +3591,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3607,7 +3607,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3623,7 +3623,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3639,7 +3639,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3655,7 +3655,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3671,7 +3671,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3687,7 +3687,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3703,7 +3703,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3719,7 +3719,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3735,7 +3735,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3767,7 +3767,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3783,7 +3783,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3799,7 +3799,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3863,7 +3863,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3879,7 +3879,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3895,7 +3895,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3911,7 +3911,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3927,7 +3927,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3943,7 +3943,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3959,7 +3959,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3975,7 +3975,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -3991,7 +3991,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4007,7 +4007,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4039,7 +4039,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4055,7 +4055,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4071,7 +4071,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4311,7 +4311,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4327,7 +4327,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        3
+        0
 280
      0
 281
@@ -4343,7 +4343,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4359,7 +4359,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4375,7 +4375,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4391,7 +4391,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4407,7 +4407,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4423,7 +4423,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4439,7 +4439,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4455,7 +4455,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4471,7 +4471,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4487,7 +4487,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        2
+        0
 280
      0
 281
@@ -4503,7 +4503,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4519,7 +4519,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4535,7 +4535,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        2
+        0
 280
      0
 281
@@ -4551,7 +4551,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4583,7 +4583,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4599,7 +4599,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        2
+        0
 280
      0
 281
@@ -4615,7 +4615,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4631,7 +4631,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4647,7 +4647,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4663,7 +4663,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4679,7 +4679,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4695,7 +4695,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4711,7 +4711,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4727,7 +4727,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4775,7 +4775,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4791,7 +4791,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4807,7 +4807,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4823,7 +4823,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4887,7 +4887,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4903,7 +4903,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4919,7 +4919,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4935,7 +4935,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -4951,7 +4951,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        8
+        0
 280
      0
 281
@@ -5319,7 +5319,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -5351,7 +5351,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -5367,7 +5367,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -5383,7 +5383,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -5399,7 +5399,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -5415,7 +5415,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -5431,7 +5431,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -5447,7 +5447,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -5463,7 +5463,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -5479,7 +5479,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -5655,7 +5655,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -5863,7 +5863,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -5879,7 +5879,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -5895,7 +5895,7 @@ AecBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autodesk,I
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -5927,7 +5927,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -5943,7 +5943,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -5959,7 +5959,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -5975,7 +5975,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        3
+        0
 280
      0
 281
@@ -5991,7 +5991,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -6007,7 +6007,7 @@ AecArchBase70|Product Desc: Autodesk Architectural Desktop 2007 |Company: Autode
  90
       129
  91
-        1
+        0
 280
      0
 281
@@ -6167,7 +6167,7 @@ ObjectDBX Classes
  90
      1153
  91
-        1
+        0
 280
      0
 281
@@ -6279,7 +6279,7 @@ ObjectDBX Classes
  90
      1152
  91
-        9
+        2
 280
      0
 281
@@ -8629,9 +8629,9 @@ AcDbViewportTableRecord
  21
 1.0
  12
-43804.12945728781
+30835.10144155752
  22
-7725.75337691966
+32738.31882349679
  13
 0.0
  23
@@ -8657,9 +8657,9 @@ AcDbViewportTableRecord
  37
 0.0
  40
-104986.620075641
+51483.2124431269
  41
-2.110244988864142
+2.072314049586776
  42
 50.0
  43
@@ -9279,7 +9279,7 @@ VIEW
 100
 AcDbSymbolTable
  70
-     3
+     0
   0
 ENDTAB
   0
@@ -9975,7 +9975,7 @@ BLOCK_RECORD
 100
 AcDbSymbolTable
  70
-     8
+     7
   0
 BLOCK_RECORD
   5
@@ -11119,9 +11119,9 @@ AcDbEntity
 100
 AcDbCircle
  10
-46746.56568620819
+46746.56568620818
  20
-16189.10135520052
+16189.10135520051
  30
 0.0
  40
@@ -11215,13 +11215,13 @@ Continuous
 100
 AcDbLine
  10
-50386.99993026399
+50386.99993026398
  20
 21789.00007049861
  30
 0.0
  11
-50386.99993026399
+50386.99993026398
  21
 22389.00007049861
  31
@@ -11247,7 +11247,7 @@ Continuous
 100
 AcDbLine
  10
-50336.99993026444
+50336.99993026443
  20
 22939.00007049885
  30
@@ -11279,13 +11279,13 @@ Continuous
 100
 AcDbLine
  10
-50386.99993026399
+50386.99993026398
  20
 22389.00007049861
  30
 0.0
  11
-50386.99993026399
+50386.99993026398
  21
 22989.00007049862
  31
@@ -11343,7 +11343,7 @@ Continuous
 100
 AcDbCircle
  10
-50386.99993026399
+50386.99993026398
  20
 22389.00007049861
  30
@@ -11377,7 +11377,7 @@ Continuous
 100
 AcDbCircle
  10
-51586.99993026444
+51586.99993026443
  20
 22389.00007049861
  30
@@ -11411,7 +11411,7 @@ Continuous
 100
 AcDbLine
  10
-53986.99993026399
+53986.99993026398
  20
 22989.00007049862
  30
@@ -11449,7 +11449,7 @@ AcDbLine
  30
 0.0
  11
-53986.99993026399
+53986.99993026398
  21
 22389.00007049861
  31
@@ -11509,7 +11509,7 @@ Continuous
 100
 AcDbCircle
  10
-53986.99993026399
+53986.99993026398
  20
 22389.00007049861
  30
@@ -11575,13 +11575,13 @@ Continuous
 100
 AcDbLine
  10
-53986.99993026399
+53986.99993026398
  20
 21789.00007049861
  30
 0.0
  11
-53986.99993026399
+53986.99993026398
  21
 22389.00007049861
  31
@@ -11607,13 +11607,13 @@ Continuous
 100
 AcDbLine
  10
-53986.99993026399
+53986.99993026398
  20
 22389.00007049861
  30
 0.0
  11
-53986.99993026399
+53986.99993026398
  21
 22989.00007049862
  31
@@ -11639,7 +11639,7 @@ Continuous
 100
 AcDbLine
  10
-53886.99993000508
+53886.99993000507
  20
 22789.00007049862
  30
@@ -11671,13 +11671,13 @@ Continuous
 100
 AcDbLine
  10
-53886.99993026399
+53886.99993026398
  20
 22639.00007049861
  30
 0.0
  11
-53886.99993026399
+53886.99993026398
  21
 22739.00007049862
  31
@@ -11709,7 +11709,7 @@ AcDbLine
  30
 0.0
  11
-53886.99993026399
+53886.99993026398
  21
 22639.00007049861
  31
@@ -11767,7 +11767,7 @@ Continuous
 100
 AcDbLine
  10
-53886.99993026399
+53886.99993026398
  20
 22739.00007049862
  30
@@ -11863,13 +11863,13 @@ Continuous
 100
 AcDbLine
  10
-51586.99993026444
+51586.99993026443
  20
 21789.00007049861
  30
 0.0
  11
-51586.99993026444
+51586.99993026443
  21
 22389.00007049861
  31
@@ -11895,13 +11895,13 @@ Continuous
 100
 AcDbLine
  10
-51586.99993026444
+51586.99993026443
  20
 22389.00007049861
  30
 0.0
  11
-51586.99993026444
+51586.99993026443
  21
 22989.00007049862
  31
@@ -11910,6 +11910,46 @@ AcDbLine
 TOP
 1070
      1
+  0
+CIRCLE
+  5
+40B5
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbCircle
+ 10
+30357.0
+ 20
+47069.0
+ 30
+0.0
+ 40
+5811.950189050143
+  0
+CIRCLE
+  5
+40B6
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbCircle
+ 10
+41727.0
+ 20
+41867.0
+ 30
+0.0
+ 40
+6067.08
   0
 VIEWPORT
   5
@@ -12373,15 +12413,11 @@ A4E
   3
 ACDB_RECOMPOSE_DATA
 350
-406F
+40BB
   3
 AcDbVariableDictionary
 350
 2C
-  3
-AcDsDecomposeData
-350
-4075
   3
 AEC_2D_SECTION_STYLES
 350
@@ -12673,11 +12709,11 @@ AcDbDictionary
   3
 ACAD_MLATT
 360
-406E
+40BA
   3
 ACAD_XREC_ROUNDTRIP
 360
-406D
+40B9
   0
 DICTIONARY
   5
@@ -13249,7 +13285,7 @@ AcDbXrecord
   0
 XRECORD
   5
-406F
+40BB
 102
 {ACAD_REACTORS
 330
@@ -13343,35 +13379,7 @@ SORTENTS
   3
 XCLIPFRAME
 350
-3D48
-  0
-DICTIONARY
-  5
-4075
-102
-{ACAD_REACTORS
-330
-C
-102
-}
-330
-C
-100
-AcDbDictionary
-281
-     1
-  3
-AcDsRecords
-350
-4077
-  3
-AcDsSchemas
-350
-4076
-1001
-ACAD
-1070
-     2
+40B7
   0
 DICTIONARY
   5
@@ -13586,38 +13594,6 @@ C
 AcDbDictionary
 281
      1
-  3
-Elevation
-350
-3F43
-  3
-Model
-350
-3F40
-  3
-Model High Detail
-350
-3F47
-  3
-Model Low Detail
-350
-3F46
-  3
-Plan
-350
-3F41
-  3
-Plan High Detail
-350
-3F45
-  3
-Plan Low Detail
-350
-3F44
-  3
-Reflected
-350
-3F42
   0
 DICTIONARY
   5
@@ -13634,602 +13610,6 @@ C
 AcDbDictionary
 281
      1
-  3
-AecDbDispRep2dSection
-350
-3E3D
-  3
-AecDbDispRepAnchor
-350
-3E3F
-  3
-AecDbDispRepAnchorBubToGrid
-350
-3E9E
-  3
-AecDbDispRepAnchorBubToGridMdl
-350
-3EA0
-  3
-AecDbDispRepAnchorBubToGridRcp
-350
-3EA2
-  3
-AecDbDispRepAnchorEntToNode
-350
-3E40
-  3
-AecDbDispRepAnchorExtendedTagToEnt
-350
-3E44
-  3
-AecDbDispRepAnchorTagToEnt
-350
-3E42
-  3
-AecDbDispRepBdgElevLineModel
-350
-3EA4
-  3
-AecDbDispRepBdgElevLinePlan
-350
-3E4E
-  3
-AecDbDispRepBdgElevLinePlan100
-350
-3E50
-  3
-AecDbDispRepBdgElevLinePlan50
-350
-3E83
-  3
-AecDbDispRepBdgElevLineRcp
-350
-3EA6
-  3
-AecDbDispRepBdgSectionLineModel
-350
-3EA8
-  3
-AecDbDispRepBdgSectionLinePlan
-350
-3E52
-  3
-AecDbDispRepBdgSectionLinePlan100
-350
-3E54
-  3
-AecDbDispRepBdgSectionLinePlan50
-350
-3E85
-  3
-AecDbDispRepBdgSectionLineRcp
-350
-3EAA
-  3
-AecDbDispRepBdgSectionModel
-350
-3EAC
-  3
-AecDbDispRepBdgSectionSubDiv
-350
-3EAD
-  3
-AecDbDispRepCeilingGrid
-350
-3E56
-  3
-AecDbDispRepCeilingGridModel
-350
-3EAF
-  3
-AecDbDispRepCeilingGridPlan100
-350
-3E58
-  3
-AecDbDispRepCeilingGridPlan50
-350
-3E87
-  3
-AecDbDispRepCeilingGridRcp
-350
-3EB1
-  3
-AecDbDispRepClipVolModel
-350
-3E1D
-  3
-AecDbDispRepClipVolPlan
-350
-3E1F
-  3
-AecDbDispRepClipVolResSubDiv
-350
-3E22
-  3
-AecDbDispRepClipVolResult
-350
-3E21
-  3
-AecDbDispRepColumnGrid
-350
-3E5A
-  3
-AecDbDispRepColumnGridModel
-350
-3EB3
-  3
-AecDbDispRepColumnGridPlan100
-350
-3E5C
-  3
-AecDbDispRepColumnGridPlan50
-350
-3E89
-  3
-AecDbDispRepColumnGridRcp
-350
-3EB5
-  3
-AecDbDispRepCurtainWallLayoutModel
-350
-3EB7
-  3
-AecDbDispRepCurtainWallLayoutPlan
-350
-3E5E
-  3
-AecDbDispRepCurtainWallLayoutPlan100
-350
-3E60
-  3
-AecDbDispRepCurtainWallLayoutPlan50
-350
-3E8B
-  3
-AecDbDispRepCurtainWallUnitModel
-350
-3EB9
-  3
-AecDbDispRepCurtainWallUnitPlan
-350
-3E62
-  3
-AecDbDispRepCurtainWallUnitPlan100
-350
-3E64
-  3
-AecDbDispRepCurtainWallUnitPlan50
-350
-3E8D
-  3
-AecDbDispRepDimGroupPlan
-350
-3EBF
-  3
-AecDbDispRepDimGroupPlan100
-350
-3EBB
-  3
-AecDbDispRepDimGroupPlan50
-350
-3EBD
-  3
-AecDbDispRepDisplayTheme
-350
-3E24
-  3
-AecDbDispRepDoorElev
-350
-3EC3
-  3
-AecDbDispRepDoorModel
-350
-3EC1
-  3
-AecDbDispRepDoorNominal
-350
-3EC7
-  3
-AecDbDispRepDoorPlan
-350
-3EC5
-  3
-AecDbDispRepDoorPlan50
-350
-3EC9
-  3
-AecDbDispRepDoorPlanHekto
-350
-3ECB
-  3
-AecDbDispRepDoorRcp
-350
-3ECD
-  3
-AecDbDispRepDoorThresholdPlan
-350
-3ECF
-  3
-AecDbDispRepDoorThresholdSymbolPlan
-350
-3ED1
-  3
-AecDbDispRepEditInPlaceProfile
-350
-3E26
-  3
-AecDbDispRepEntRef
-350
-3E29
-  3
-AecDbDispRepLayoutCurve
-350
-3E2B
-  3
-AecDbDispRepLayoutGrid2d
-350
-3E2D
-  3
-AecDbDispRepLayoutGrid3d
-350
-3E2F
-  3
-AecDbDispRepMaskBlockRef
-350
-3E31
-  3
-AecDbDispRepMaskBlockRefRcp
-350
-3ED3
-  3
-AecDbDispRepMassElemModel
-350
-3E46
-  3
-AecDbDispRepMassElemPlan100
-350
-3ED5
-  3
-AecDbDispRepMassElemPlan50
-350
-3ED7
-  3
-AecDbDispRepMassElemRcp
-350
-3ED9
-  3
-AecDbDispRepMassElemSchem
-350
-3E48
-  3
-AecDbDispRepMassGroupModel
-350
-3E4A
-  3
-AecDbDispRepMassGroupPlan
-350
-3E4C
-  3
-AecDbDispRepMassGroupPlan100
-350
-3EDB
-  3
-AecDbDispRepMassGroupPlan50
-350
-3EDD
-  3
-AecDbDispRepMassGroupRcp
-350
-3EDF
-  3
-AecDbDispRepMaterial
-350
-3E33
-  3
-AecDbDispRepMvBlockRef
-350
-3E35
-  3
-AecDbDispRepMvBlockRefModel
-350
-3E36
-  3
-AecDbDispRepMvBlockRefPlan100
-350
-3E66
-  3
-AecDbDispRepMvBlockRefPlan50
-350
-3E8F
-  3
-AecDbDispRepMvBlockRefRcp
-350
-3EE1
-  3
-AecDbDispRepOpening
-350
-3EE2
-  3
-AecDbDispRepOpeningModel
-350
-3EE4
-  3
-AecDbDispRepOpeningPlan100
-350
-3EE6
-  3
-AecDbDispRepOpeningPlan50
-350
-3EE8
-  3
-AecDbDispRepOpeningPlanReflected
-350
-3EEA
-  3
-AecDbDispRepOpeningSillPlan
-350
-3EEC
-  3
-AecDbDispRepPolygonModel
-350
-3E37
-  3
-AecDbDispRepPolygonTrueColour
-350
-3E39
-  3
-AecDbDispRepRailingModel
-350
-3EEE
-  3
-AecDbDispRepRailingPlan
-350
-3EF0
-  3
-AecDbDispRepRailingPlan100
-350
-3EF2
-  3
-AecDbDispRepRailingPlan50
-350
-3EF4
-  3
-AecDbDispRepRoofModel
-350
-3EF6
-  3
-AecDbDispRepRoofPlan
-350
-3E67
-  3
-AecDbDispRepRoofPlan100
-350
-3E69
-  3
-AecDbDispRepRoofPlan50
-350
-3E90
-  3
-AecDbDispRepRoofRcp
-350
-3EF8
-  3
-AecDbDispRepRoofSlabModel
-350
-3EFC
-  3
-AecDbDispRepRoofSlabPlan
-350
-3E6D
-  3
-AecDbDispRepRoofSlabPlan100
-350
-3E6F
-  3
-AecDbDispRepRoofSlabPlan50
-350
-3E92
-  3
-AecDbDispRepScheduleTable
-350
-3F3E
-  3
-AecDbDispRepSlabModel
-350
-3EFA
-  3
-AecDbDispRepSlabPlan
-350
-3E6B
-  3
-AecDbDispRepSlabPlan100
-350
-3E71
-  3
-AecDbDispRepSlabPlan50
-350
-3E94
-  3
-AecDbDispRepSlice
-350
-3E3B
-  3
-AecDbDispRepSpaceDecomposed
-350
-3EFE
-  3
-AecDbDispRepSpaceModel
-350
-3F00
-  3
-AecDbDispRepSpacePlan
-350
-3E73
-  3
-AecDbDispRepSpacePlan100
-350
-3E75
-  3
-AecDbDispRepSpacePlan50
-350
-3E96
-  3
-AecDbDispRepSpaceRcp
-350
-3F02
-  3
-AecDbDispRepSpaceVolume
-350
-3F04
-  3
-AecDbDispRepStairModel
-350
-3F06
-  3
-AecDbDispRepStairPlan
-350
-3F08
-  3
-AecDbDispRepStairPlan100
-350
-3F0A
-  3
-AecDbDispRepStairPlan50
-350
-3F0C
-  3
-AecDbDispRepStairPlanOverlapping
-350
-3F0E
-  3
-AecDbDispRepStairRcp
-350
-3F10
-  3
-AecDbDispRepWallGraph
-350
-3F12
-  3
-AecDbDispRepWallModel
-350
-3F14
-  3
-AecDbDispRepWallPlan
-350
-3E77
-  3
-AecDbDispRepWallPlan100
-350
-3E79
-  3
-AecDbDispRepWallPlan50
-350
-3E98
-  3
-AecDbDispRepWallRcp
-350
-3F16
-  3
-AecDbDispRepWallSchem
-350
-3F18
-  3
-AecDbDispRepWindowAssemblyModel
-350
-3F1A
-  3
-AecDbDispRepWindowAssemblyPlan
-350
-3E7B
-  3
-AecDbDispRepWindowAssemblyPlan100
-350
-3E7D
-  3
-AecDbDispRepWindowAssemblyPlan50
-350
-3E9A
-  3
-AecDbDispRepWindowAssemblySillPlan
-350
-3F1C
-  3
-AecDbDispRepWindowElev
-350
-3F20
-  3
-AecDbDispRepWindowModel
-350
-3F1E
-  3
-AecDbDispRepWindowNominal
-350
-3F24
-  3
-AecDbDispRepWindowPlan
-350
-3F22
-  3
-AecDbDispRepWindowPlan100
-350
-3F26
-  3
-AecDbDispRepWindowPlan50
-350
-3F28
-  3
-AecDbDispRepWindowRcp
-350
-3F2A
-  3
-AecDbDispRepWindowSillPlan
-350
-3F2C
-  3
-AecDbDispRepZone
-350
-3E7F
-  3
-AecDbDispRepZonePlan100
-350
-3E81
-  3
-AecDbDispRepZonePlan50
-350
-3E9C
-  3
-AecsDbDispRepMemberElevationDesign
-350
-3F2E
-  3
-AecsDbDispRepMemberElevationDetail
-350
-3F30
-  3
-AecsDbDispRepMemberLogical
-350
-3F32
-  3
-AecsDbDispRepMemberModelDesign
-350
-3F34
-  3
-AecsDbDispRepMemberModelDetail
-350
-3F36
-  3
-AecsDbDispRepMemberPlanDesign
-350
-3F38
-  3
-AecsDbDispRepMemberPlanDetail
-350
-3F3A
-  3
-AecsDbDispRepMemberPlanSketch
-350
-3F3C
   0
 DICTIONARY
   5
@@ -14246,570 +13626,6 @@ C
 AcDbDictionary
 281
      1
-  3
-*A1
-350
-3E1E
-  3
-*A10
-350
-3E32
-  3
-*A100
-350
-3EED
-  3
-*A101
-350
-3EEF
-  3
-*A102
-350
-3EF1
-  3
-*A103
-350
-3EF3
-  3
-*A104
-350
-3EF5
-  3
-*A105
-350
-3EF7
-  3
-*A106
-350
-3EF9
-  3
-*A107
-350
-3EFB
-  3
-*A108
-350
-3EFD
-  3
-*A109
-350
-3EFF
-  3
-*A11
-350
-3E34
-  3
-*A110
-350
-3F01
-  3
-*A111
-350
-3F03
-  3
-*A112
-350
-3F05
-  3
-*A113
-350
-3F07
-  3
-*A114
-350
-3F09
-  3
-*A115
-350
-3F0B
-  3
-*A116
-350
-3F0D
-  3
-*A117
-350
-3F0F
-  3
-*A118
-350
-3F11
-  3
-*A119
-350
-3F13
-  3
-*A12
-350
-3E38
-  3
-*A120
-350
-3F15
-  3
-*A121
-350
-3F17
-  3
-*A122
-350
-3F19
-  3
-*A123
-350
-3F1B
-  3
-*A124
-350
-3F1D
-  3
-*A125
-350
-3F1F
-  3
-*A126
-350
-3F21
-  3
-*A127
-350
-3F23
-  3
-*A128
-350
-3F25
-  3
-*A129
-350
-3F27
-  3
-*A13
-350
-3E3A
-  3
-*A130
-350
-3F29
-  3
-*A131
-350
-3F2B
-  3
-*A132
-350
-3F2D
-  3
-*A133
-350
-3F2F
-  3
-*A134
-350
-3F31
-  3
-*A135
-350
-3F33
-  3
-*A136
-350
-3F35
-  3
-*A137
-350
-3F37
-  3
-*A138
-350
-3F39
-  3
-*A139
-350
-3F3B
-  3
-*A14
-350
-3E3C
-  3
-*A140
-350
-3F3D
-  3
-*A141
-350
-3F3F
-  3
-*A15
-350
-3E3E
-  3
-*A16
-350
-3E41
-  3
-*A17
-350
-3E43
-  3
-*A18
-350
-3E45
-  3
-*A19
-350
-3E47
-  3
-*A2
-350
-3E20
-  3
-*A20
-350
-3E49
-  3
-*A21
-350
-3E4B
-  3
-*A22
-350
-3E4D
-  3
-*A23
-350
-3E4F
-  3
-*A24
-350
-3E51
-  3
-*A25
-350
-3E53
-  3
-*A26
-350
-3E55
-  3
-*A27
-350
-3E57
-  3
-*A28
-350
-3E59
-  3
-*A29
-350
-3E5B
-  3
-*A3
-350
-3E23
-  3
-*A30
-350
-3E5D
-  3
-*A31
-350
-3E5F
-  3
-*A32
-350
-3E61
-  3
-*A33
-350
-3E63
-  3
-*A34
-350
-3E65
-  3
-*A35
-350
-3E68
-  3
-*A36
-350
-3E6A
-  3
-*A37
-350
-3E6C
-  3
-*A38
-350
-3E6E
-  3
-*A39
-350
-3E70
-  3
-*A4
-350
-3E25
-  3
-*A40
-350
-3E72
-  3
-*A41
-350
-3E74
-  3
-*A42
-350
-3E76
-  3
-*A43
-350
-3E78
-  3
-*A44
-350
-3E7A
-  3
-*A45
-350
-3E7C
-  3
-*A46
-350
-3E7E
-  3
-*A47
-350
-3E80
-  3
-*A48
-350
-3E82
-  3
-*A49
-350
-3E84
-  3
-*A5
-350
-3E28
-  3
-*A50
-350
-3E86
-  3
-*A51
-350
-3E88
-  3
-*A52
-350
-3E8A
-  3
-*A53
-350
-3E8C
-  3
-*A54
-350
-3E8E
-  3
-*A55
-350
-3E91
-  3
-*A56
-350
-3E93
-  3
-*A57
-350
-3E95
-  3
-*A58
-350
-3E97
-  3
-*A59
-350
-3E99
-  3
-*A6
-350
-3E2A
-  3
-*A60
-350
-3E9B
-  3
-*A61
-350
-3E9D
-  3
-*A62
-350
-3E9F
-  3
-*A63
-350
-3EA1
-  3
-*A64
-350
-3EA3
-  3
-*A65
-350
-3EA5
-  3
-*A66
-350
-3EA7
-  3
-*A67
-350
-3EA9
-  3
-*A68
-350
-3EAB
-  3
-*A69
-350
-3EAE
-  3
-*A7
-350
-3E2C
-  3
-*A70
-350
-3EB0
-  3
-*A71
-350
-3EB2
-  3
-*A72
-350
-3EB4
-  3
-*A73
-350
-3EB6
-  3
-*A74
-350
-3EB8
-  3
-*A75
-350
-3EBA
-  3
-*A76
-350
-3EBC
-  3
-*A77
-350
-3EBE
-  3
-*A78
-350
-3EC0
-  3
-*A79
-350
-3EC2
-  3
-*A8
-350
-3E2E
-  3
-*A80
-350
-3EC4
-  3
-*A81
-350
-3EC6
-  3
-*A82
-350
-3EC8
-  3
-*A83
-350
-3ECA
-  3
-*A84
-350
-3ECC
-  3
-*A85
-350
-3ECE
-  3
-*A86
-350
-3ED0
-  3
-*A87
-350
-3ED2
-  3
-*A88
-350
-3ED4
-  3
-*A89
-350
-3ED6
-  3
-*A9
-350
-3E30
-  3
-*A90
-350
-3ED8
-  3
-*A91
-350
-3EDA
-  3
-*A92
-350
-3EDC
-  3
-*A93
-350
-3EDE
-  3
-*A94
-350
-3EE0
-  3
-*A95
-350
-3EE3
-  3
-*A96
-350
-3EE5
-  3
-*A97
-350
-3EE7
-  3
-*A98
-350
-3EE9
-  3
-*A99
-350
-3EEB
   0
 DICTIONARY
   5
@@ -15242,10 +14058,6 @@ C
 AcDbDictionary
 281
      1
-  3
-AEC_VARS_DWG_SETUP
-350
-3E27
   0
 DICTIONARY
   5
@@ -15449,7 +14261,7 @@ AcDbSortentsTable
   0
 XRECORD
   5
-406E
+40BA
 102
 {ACAD_REACTORS
 330
@@ -15499,7 +14311,7 @@ ROOM
   0
 XRECORD
   5
-406D
+40B9
 102
 {ACAD_REACTORS
 330
@@ -15563,7 +14375,7 @@ ACDBDETAILVIEWSTYLE
 102
 {ACAD_XDICTIONARY
 360
-40A4
+40E8
 102
 }
 102
@@ -16307,7 +15119,7 @@ MLEADERSTYLE
 102
 {ACAD_XDICTIONARY
 360
-4094
+40D8
 102
 }
 102
@@ -16989,7 +15801,7 @@ ACDBSECTIONVIEWSTYLE
 102
 {ACAD_XDICTIONARY
 360
-40A2
+40E6
 102
 }
 102
@@ -17311,7 +16123,7 @@ VISUALSTYLE
 102
 {ACAD_XDICTIONARY
 360
-4082
+40C6
 102
 }
 102
@@ -17405,7 +16217,7 @@ VISUALSTYLE
 102
 {ACAD_XDICTIONARY
 360
-4080
+40C4
 102
 }
 102
@@ -17499,7 +16311,7 @@ VISUALSTYLE
 102
 {ACAD_XDICTIONARY
 360
-408A
+40CE
 102
 }
 102
@@ -17593,7 +16405,7 @@ VISUALSTYLE
 102
 {ACAD_XDICTIONARY
 360
-4092
+40D6
 102
 }
 102
@@ -17781,7 +16593,7 @@ VISUALSTYLE
 102
 {ACAD_XDICTIONARY
 360
-4088
+40CC
 102
 }
 102
@@ -17875,7 +16687,7 @@ VISUALSTYLE
 102
 {ACAD_XDICTIONARY
 360
-409A
+40DE
 102
 }
 102
@@ -17969,7 +16781,7 @@ VISUALSTYLE
 102
 {ACAD_XDICTIONARY
 360
-4090
+40D4
 102
 }
 102
@@ -18063,7 +16875,7 @@ VISUALSTYLE
 102
 {ACAD_XDICTIONARY
 360
-4078
+40BC
 102
 }
 102
@@ -18157,7 +16969,7 @@ VISUALSTYLE
 102
 {ACAD_XDICTIONARY
 360
-407A
+40BE
 102
 }
 102
@@ -18251,7 +17063,7 @@ VISUALSTYLE
 102
 {ACAD_XDICTIONARY
 360
-407C
+40C0
 102
 }
 102
@@ -18345,7 +17157,7 @@ VISUALSTYLE
 102
 {ACAD_XDICTIONARY
 360
-407E
+40C2
 102
 }
 102
@@ -18533,7 +17345,7 @@ VISUALSTYLE
 102
 {ACAD_XDICTIONARY
 360
-4096
+40DA
 102
 }
 102
@@ -18627,7 +17439,7 @@ VISUALSTYLE
 102
 {ACAD_XDICTIONARY
 360
-408E
+40D2
 102
 }
 102
@@ -18721,7 +17533,7 @@ VISUALSTYLE
 102
 {ACAD_XDICTIONARY
 360
-4098
+40DC
 102
 }
 102
@@ -19379,7 +18191,7 @@ VISUALSTYLE
 102
 {ACAD_XDICTIONARY
 360
-408C
+40D0
 102
 }
 102
@@ -19909,7 +18721,7 @@ DictionaryVariables
   0
 DICTIONARYVAR
   5
-3D48
+40B7
 102
 {ACAD_REACTORS
 330
@@ -19925,58 +18737,6 @@ DictionaryVariables
   1
 2
   0
-DICTIONARY
-  5
-4077
-102
-{ACAD_REACTORS
-330
-4075
-102
-}
-330
-4075
-100
-AcDbDictionary
-281
-     1
-  0
-DICTIONARY
-  5
-4076
-102
-{ACAD_REACTORS
-330
-4075
-102
-}
-330
-4075
-100
-AcDbDictionary
-281
-     1
-  3
-8796074955520
-350
-4070
-  3
-8796074955536
-350
-4071
-  3
-8796074955552
-350
-4072
-  3
-8796074955568
-350
-4073
-  3
-8796074955584
-350
-4074
-  0
 SPATIAL_INDEX
   5
 DE7
@@ -19991,35 +18751,37 @@ DE6
 100
 AcDbIndex
  40
-2456793.703750069
+2456931.699511285
 100
 AcDbSpatialIndex
  40
-64513.24580363764
+64503.9659177568
  40
--2454.727347580791
+-2457.17162949772
  40
-64973.06170335139
+64966.67202928728
  40
--312.863580827584
+-316.8397743132445
  40
-10000000000.0
+2165225144377.788
  40
-0.0
+-0.0017546990531974
  90
         0
  90
-      240
+      300
 310
-01FF0000FFFF0000FFFF000000000000010800000108000002010901000005877800002E000002010A000002010B000002020109000001080000020109000002010A000002010B17000031C97E0001000100010001000100010001000100010001000100010001000100010001000100010001000100010001007AD1010000
+01FF0000FFFF0000FFFF0000FFFF00000108000001080000020109000002010A000002010B000002020109000001080000020109000002010A000002010B00000202010A000001080000020109000002010A000002010B00000202010B000001080000020109000002010A000002010B00000202010C0000010D0100000587
 310
-05E07E000053000002011801000005C77A000053000002011A01000005837A00005300000202010A000001080000020109000002010A000002010B00000202010B000001080000020109000002010A000002010B01000005C67A00005300000202012801000005B8790000530000020200
+7800002E00000202010D0000010F17000031C97E0001000100010001000100010001000100010001000100010001000100010001000100010001000100010001007CFB01000005E07E000053000002011C01000005C77A000053000002011E01000005837A00005300000202010F0000010F01000005C67A00005300000201
+310
+1C01000006B6810100530000000202011E01000006B58101005300000002012C01000005B8790000530000020200
   1
 END ACDBSPATIALINDEX BINARY DATA
   0
 DICTIONARY
   5
-40A4
+40E8
 330
 2EC8
 100
@@ -20031,7 +18793,7 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-40A5
+40E9
   0
 DICTIONARY
   5
@@ -20323,7 +19085,7 @@ SPECULARTILE
   0
 DICTIONARY
   5
-4094
+40D8
 330
 247B
 100
@@ -20335,11 +19097,11 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-4095
+40D9
   0
 DICTIONARY
   5
-40A2
+40E6
 330
 2EC6
 100
@@ -20351,7 +19113,7 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-40A3
+40E7
   0
 DICTIONARY
   5
@@ -20367,11 +19129,11 @@ AcDbDictionary
   3
 ACAD_ROUNDTRIP_2008_TABLESTYLE_CELLSTYLEMAP
 360
-406C
+40B8
   0
 DICTIONARY
   5
-4082
+40C6
 330
 1B7D
 100
@@ -20383,11 +19145,11 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-4083
+40C7
   0
 DICTIONARY
   5
-4080
+40C4
 330
 1B7C
 100
@@ -20399,11 +19161,11 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-4081
+40C5
   0
 DICTIONARY
   5
-408A
+40CE
 330
 1B83
 100
@@ -20415,11 +19177,11 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-408B
+40CF
   0
 DICTIONARY
   5
-4092
+40D6
 330
 1B88
 100
@@ -20431,7 +19193,7 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-4093
+40D7
   0
 DICTIONARY
   5
@@ -20447,7 +19209,7 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-4086
+40CA
   3
 LightingQuality
 360
@@ -20455,7 +19217,7 @@ LightingQuality
   0
 DICTIONARY
   5
-4088
+40CC
 330
 1B82
 100
@@ -20467,11 +19229,11 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-4089
+40CD
   0
 DICTIONARY
   5
-409A
+40DE
 330
 27A0
 100
@@ -20483,11 +19245,11 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-409B
+40DF
   0
 DICTIONARY
   5
-4090
+40D4
 330
 1B87
 100
@@ -20499,11 +19261,11 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-4091
+40D5
   0
 DICTIONARY
   5
-4078
+40BC
 330
 1B78
 100
@@ -20515,11 +19277,11 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-4079
+40BD
   0
 DICTIONARY
   5
-407A
+40BE
 330
 1B79
 100
@@ -20531,11 +19293,11 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-407B
+40BF
   0
 DICTIONARY
   5
-407C
+40C0
 330
 1B7A
 100
@@ -20547,11 +19309,11 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-407D
+40C1
   0
 DICTIONARY
   5
-407E
+40C2
 330
 1B7B
 100
@@ -20563,7 +19325,7 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-407F
+40C3
   0
 DICTIONARY
   5
@@ -20579,7 +19341,7 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-4085
+40C9
   3
 LightingQuality
 360
@@ -20587,7 +19349,7 @@ LightingQuality
   0
 DICTIONARY
   5
-4096
+40DA
 330
 279E
 100
@@ -20599,11 +19361,11 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-4097
+40DB
   0
 DICTIONARY
   5
-408E
+40D2
 330
 1B86
 100
@@ -20615,11 +19377,11 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-408F
+40D3
   0
 DICTIONARY
   5
-4098
+40DC
 330
 279F
 100
@@ -20631,7 +19393,7 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-4099
+40DD
   0
 DICTIONARY
   5
@@ -20647,7 +19409,7 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-4087
+40CB
   3
 LightingQuality
 360
@@ -20667,7 +19429,7 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-40A0
+40E4
   3
 LightingQuality
 360
@@ -20687,7 +19449,7 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-409F
+40E3
   3
 LightingQuality
 360
@@ -20707,7 +19469,7 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-409C
+40E0
   3
 LightingQuality
 360
@@ -20727,7 +19489,7 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-409D
+40E1
   3
 LightingQuality
 360
@@ -20747,7 +19509,7 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-40A1
+40E5
   3
 LightingQuality
 360
@@ -20755,7 +19517,7 @@ LightingQuality
   0
 DICTIONARY
   5
-408C
+40D0
 330
 1B84
 100
@@ -20767,7 +19529,7 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-408D
+40D1
   0
 DICTIONARY
   5
@@ -20783,7 +19545,7 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-4084
+40C8
   3
 LightingQuality
 360
@@ -20803,7 +19565,7 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-409E
+40E2
   3
 LightingQuality
 360
@@ -20811,191 +19573,15 @@ LightingQuality
   0
 XRECORD
   5
-4070
+40E9
 102
 {ACAD_REACTORS
 330
-4076
+40E8
 102
 }
 330
-4076
-100
-AcDbXrecord
-280
-     1
-  1
-AcDb_Thumbnail_Schema
-102
-{ATTRRECORD
-341
-4071
-  2
-AcDbDs::TreatedAsObjectData
-280
-     1
-291
-     1
-102
-ATTRRECORD}
-102
-{ATTRRECORD
-341
-4072
-  2
-AcDbDs::Legacy
-280
-     1
-291
-     1
-102
-ATTRRECORD}
-  2
-AcDbDs::ID
-280
-    10
- 91
-        8
-102
-{ATTRRECORD
-341
-4073
-  2
-AcDs:Indexable
-280
-     1
-291
-     1
-102
-ATTRRECORD}
-102
-{ATTRRECORD
-341
-4074
-  2
-AcDbDs::HandleAttribute
-280
-     7
-282
-     1
-102
-ATTRRECORD}
-  2
-Thumbnail_Data
-280
-    15
- 91
-        0
-  0
-XRECORD
-  5
-4071
-102
-{ACAD_REACTORS
-330
-4076
-102
-}
-330
-4076
-100
-AcDbXrecord
-280
-     1
-  1
-AcDbDs::TreatedAsObjectDataSchema
-  2
-AcDbDs::TreatedAsObjectData
-280
-     1
- 91
-        0
-  0
-XRECORD
-  5
-4072
-102
-{ACAD_REACTORS
-330
-4076
-102
-}
-330
-4076
-100
-AcDbXrecord
-280
-     1
-  1
-AcDbDs::LegacySchema
-  2
-AcDbDs::Legacy
-280
-     1
- 91
-        0
-  0
-XRECORD
-  5
-4073
-102
-{ACAD_REACTORS
-330
-4076
-102
-}
-330
-4076
-100
-AcDbXrecord
-280
-     1
-  1
-AcDbDs::IndexedPropertySchema
-  2
-AcDs:Indexable
-280
-     1
- 91
-        0
-  0
-XRECORD
-  5
-4074
-102
-{ACAD_REACTORS
-330
-4076
-102
-}
-330
-4076
-100
-AcDbXrecord
-280
-     1
-  1
-AcDbDs::HandleAttributeSchema
-  2
-AcDbDs::HandleAttribute
-280
-     7
- 91
-        1
-284
-     1
-  0
-XRECORD
-  5
-40A5
-102
-{ACAD_REACTORS
-330
-40A4
-102
-}
-330
-40A4
+40E8
 100
 AcDbXrecord
 280
@@ -25615,15 +24201,15 @@ AcDbXrecord
   0
 XRECORD
   5
-4095
+40D9
 102
 {ACAD_REACTORS
 330
-4094
+40D8
 102
 }
 330
-4094
+40D8
 100
 AcDbXrecord
 280
@@ -25635,15 +24221,15 @@ ACAD_ROUNDTRIP_2012_MLEADER_STYLE
   0
 XRECORD
   5
-40A3
+40E7
 102
 {ACAD_REACTORS
 330
-40A2
+40E6
 102
 }
 330
-40A2
+40E6
 100
 AcDbXrecord
 280
@@ -25659,7 +24245,7 @@ FLAGS
   0
 CELLSTYLEMAP
   5
-406C
+40B8
 102
 {ACAD_REACTORS
 330
@@ -26305,15 +24891,15 @@ CELLSTYLE_END
   0
 XRECORD
   5
-4083
+40C7
 102
 {ACAD_REACTORS
 330
-4082
+40C6
 102
 }
 330
-4082
+40C6
 100
 AcDbXrecord
 280
@@ -26825,15 +25411,15 @@ RTVSPropertyOp62
   0
 XRECORD
   5
-4081
+40C5
 102
 {ACAD_REACTORS
 330
-4080
+40C4
 102
 }
 330
-4080
+40C4
 100
 AcDbXrecord
 280
@@ -27345,15 +25931,15 @@ RTVSPropertyOp62
   0
 XRECORD
   5
-408B
+40CF
 102
 {ACAD_REACTORS
 330
-408A
+40CE
 102
 }
 330
-408A
+40CE
 100
 AcDbXrecord
 280
@@ -27865,15 +26451,15 @@ RTVSPropertyOp62
   0
 XRECORD
   5
-4093
+40D7
 102
 {ACAD_REACTORS
 330
-4092
+40D6
 102
 }
 330
-4092
+40D6
 100
 AcDbXrecord
 280
@@ -28385,7 +26971,7 @@ RTVSPropertyOp62
   0
 XRECORD
   5
-4086
+40CA
 102
 {ACAD_REACTORS
 330
@@ -28923,15 +27509,15 @@ AcDbXrecord
   0
 XRECORD
   5
-4089
+40CD
 102
 {ACAD_REACTORS
 330
-4088
+40CC
 102
 }
 330
-4088
+40CC
 100
 AcDbXrecord
 280
@@ -29443,15 +28029,15 @@ RTVSPropertyOp62
   0
 XRECORD
   5
-409B
+40DF
 102
 {ACAD_REACTORS
 330
-409A
+40DE
 102
 }
 330
-409A
+40DE
 100
 AcDbXrecord
 280
@@ -29963,15 +28549,15 @@ RTVSPropertyOp62
   0
 XRECORD
   5
-4091
+40D5
 102
 {ACAD_REACTORS
 330
-4090
+40D4
 102
 }
 330
-4090
+40D4
 100
 AcDbXrecord
 280
@@ -30483,15 +29069,15 @@ RTVSPropertyOp62
   0
 XRECORD
   5
-4079
+40BD
 102
 {ACAD_REACTORS
 330
-4078
+40BC
 102
 }
 330
-4078
+40BC
 100
 AcDbXrecord
 280
@@ -31003,15 +29589,15 @@ RTVSPropertyOp62
   0
 XRECORD
   5
-407B
+40BF
 102
 {ACAD_REACTORS
 330
-407A
+40BE
 102
 }
 330
-407A
+40BE
 100
 AcDbXrecord
 280
@@ -31523,15 +30109,15 @@ RTVSPropertyOp62
   0
 XRECORD
   5
-407D
+40C1
 102
 {ACAD_REACTORS
 330
-407C
+40C0
 102
 }
 330
-407C
+40C0
 100
 AcDbXrecord
 280
@@ -32043,15 +30629,15 @@ RTVSPropertyOp62
   0
 XRECORD
   5
-407F
+40C3
 102
 {ACAD_REACTORS
 330
-407E
+40C2
 102
 }
 330
-407E
+40C2
 100
 AcDbXrecord
 280
@@ -32563,7 +31149,7 @@ RTVSPropertyOp62
   0
 XRECORD
   5
-4085
+40C9
 102
 {ACAD_REACTORS
 330
@@ -33101,15 +31687,15 @@ AcDbXrecord
   0
 XRECORD
   5
-4097
+40DB
 102
 {ACAD_REACTORS
 330
-4096
+40DA
 102
 }
 330
-4096
+40DA
 100
 AcDbXrecord
 280
@@ -33621,15 +32207,15 @@ RTVSPropertyOp62
   0
 XRECORD
   5
-408F
+40D3
 102
 {ACAD_REACTORS
 330
-408E
+40D2
 102
 }
 330
-408E
+40D2
 100
 AcDbXrecord
 280
@@ -34141,15 +32727,15 @@ RTVSPropertyOp62
   0
 XRECORD
   5
-4099
+40DD
 102
 {ACAD_REACTORS
 330
-4098
+40DC
 102
 }
 330
-4098
+40DC
 100
 AcDbXrecord
 280
@@ -34661,7 +33247,7 @@ RTVSPropertyOp62
   0
 XRECORD
   5
-4087
+40CB
 102
 {ACAD_REACTORS
 330
@@ -35199,7 +33785,7 @@ AcDbXrecord
   0
 XRECORD
   5
-40A0
+40E4
 102
 {ACAD_REACTORS
 330
@@ -35737,7 +34323,7 @@ AcDbXrecord
   0
 XRECORD
   5
-409F
+40E3
 102
 {ACAD_REACTORS
 330
@@ -36275,7 +34861,7 @@ AcDbXrecord
   0
 XRECORD
   5
-409C
+40E0
 102
 {ACAD_REACTORS
 330
@@ -36813,7 +35399,7 @@ AcDbXrecord
   0
 XRECORD
   5
-409D
+40E1
 102
 {ACAD_REACTORS
 330
@@ -37351,7 +35937,7 @@ AcDbXrecord
   0
 XRECORD
   5
-40A1
+40E5
 102
 {ACAD_REACTORS
 330
@@ -37889,15 +36475,15 @@ AcDbXrecord
   0
 XRECORD
   5
-408D
+40D1
 102
 {ACAD_REACTORS
 330
-408C
+40D0
 102
 }
 330
-408C
+40D0
 100
 AcDbXrecord
 280
@@ -38409,7 +36995,7 @@ RTVSPropertyOp62
   0
 XRECORD
   5
-4084
+40C8
 102
 {ACAD_REACTORS
 330
@@ -38947,7 +37533,7 @@ AcDbXrecord
   0
 XRECORD
   5
-409E
+40E2
 102
 {ACAD_REACTORS
 330

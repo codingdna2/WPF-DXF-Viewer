@@ -18,7 +18,7 @@ namespace DXFLib
         public double LineTypeScale { get; set; }
         public bool IsInvisible { get; set; }
 
-        public virtual bool HasChildren { get { return false; } }
+        public virtual bool HasChildren { get { return (children != null && children.Count > 0); } }
         private List<DXFEntity> children = new List<DXFEntity>();
         public List<DXFEntity> Children { get { return children; } }
 

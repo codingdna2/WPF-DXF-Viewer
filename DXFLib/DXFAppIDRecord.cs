@@ -9,6 +9,10 @@ namespace DXFLib
     {
         public string ApplicationName { get; set; }
 
+        public override string ToString()
+        {
+            return ApplicationName;
+        }
     }
 
     class DXFAppIDParser : DXFRecordParser

@@ -8,6 +8,11 @@ namespace DXFLib
     public class DXFBlockRecord : DXFRecord
     {
         public string BlockName { get; set; }
+
+        public override string ToString()
+        {
+            return BlockName;
+        }
     }
 
     class DXFBlockRecordParser : DXFRecordParser
