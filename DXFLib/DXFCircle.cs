@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DXFLib
+﻿namespace DXFLib
 {
     [Entity("CIRCLE")]
     public class DXFCircle : DXFEntity
     {
         public double Thickness { get; set; }
+
         private DXFPoint center = new DXFPoint();
+
         public DXFPoint Center { get { return center; } }
 
         public double Radius { get; set; }
 
-        private DXFPoint extrusion = new DXFPoint();
+        private DXFPoint extrusion = new DXFPoint() { X = 0, Y = 0, Z = 1 };
+
         public DXFPoint ExtrusionDirection { get { return extrusion; } }
 
         public override void ParseGroupCode(int groupcode, string value)

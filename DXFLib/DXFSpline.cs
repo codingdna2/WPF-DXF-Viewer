@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace DXFLib
 {
@@ -9,6 +7,7 @@ namespace DXFLib
     public class DXFSpline : DXFEntity
     {
         private DXFPoint normal = new DXFPoint();
+
         public DXFPoint Normal { get { return normal; } }
 
         [Flags]
@@ -20,32 +19,43 @@ namespace DXFLib
             Planar = 8,
             Linear = 16
         }
+
         public FlagsEnum Flags { get; set; }
 
         public int Degree { get; set; }
+
         public int KnotCount { get; set; }
+
         public int ControlPointCount { get; set; }
+
         public int FitPointCount { get; set; }
 
         public double KnotTolerance { get; set; }
+
         public double ControlPointTolerance { get; set; }
+
         public double FitPointTolerance { get; set; }
 
         private DXFPoint starttangent = new DXFPoint();
+
         public DXFPoint StartTangent { get { return starttangent; } }
 
         private DXFPoint endtangent = new DXFPoint();
+
         public DXFPoint EndTangent { get { return endtangent; } }
 
         private List<double> knotvalues = new List<double>();
+
         public List<double> KnotValues { get { return knotvalues; } }
 
         public double Weight { get; set; }
 
         private List<DXFPoint> controlpoints = new List<DXFPoint>();
+
         public List<DXFPoint> ControlPoints { get { return controlpoints; } }
 
         private List<DXFPoint> fitpoints = new List<DXFPoint>();
+
         public List<DXFPoint> FitPoints { get { return fitpoints; } }
 
         private DXFPoint LastControlPoint
@@ -137,7 +147,7 @@ namespace DXFLib
                     Weight = double.Parse(value);
                     break;
                 case 10:
-                    if (LastControlPoint==null || LastControlPoint.X != null)
+                    if (LastControlPoint == null || LastControlPoint.X != null)
                         LastControlPoint = new DXFPoint();
                     LastControlPoint.X = double.Parse(value);
                     break;

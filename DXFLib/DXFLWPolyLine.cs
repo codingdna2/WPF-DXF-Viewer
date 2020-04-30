@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace DXFLib
 {
@@ -20,19 +18,26 @@ namespace DXFLib
         public FlagsEnum Flags { get; set; }
 
         public double? ConstantWidth { get; set; }
+
         public double Elevation { get; set; }
+
         public double Thickness { get; set; }
 
         public class Element
         {
             private DXFPoint vertex = new DXFPoint();
+
             public DXFPoint Vertex { get { return vertex; } }
+
             public double StartWidth { get; set; }
+
             public double EndWidth { get; set; }
+
             public double Bulge { get; set; }
         }
 
         private List<Element> elements = new List<Element>();
+
         public List<Element> Elements { get { return elements; } }
 
         private Element LastElement
@@ -49,7 +54,8 @@ namespace DXFLib
             }
         }
 
-        private DXFPoint extrusion = new DXFPoint();
+        private DXFPoint extrusion = new DXFPoint() { X = 0, Y = 0, Z = 1 };
+
         public DXFPoint ExtrusionDirection { get { return extrusion; } }
 
         public override void ParseGroupCode(int groupcode, string value)

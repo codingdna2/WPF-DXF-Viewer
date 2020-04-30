@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DXFLib
+﻿namespace DXFLib
 {
     public class DXFHeader
     {
@@ -18,8 +13,8 @@ namespace DXFLib
 
         public enum Direction
         {
-            CounterClockWise=0,
-            ClockWise=1
+            CounterClockWise = 0,
+            ClockWise = 1
         }
 
         [Header("$ANGDIR")]

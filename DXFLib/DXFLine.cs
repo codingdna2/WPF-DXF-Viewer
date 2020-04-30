@@ -1,22 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DXFLib
+﻿namespace DXFLib
 {
     [Entity("LINE")]
     public class DXFLine : DXFEntity
     {
         private DXFPoint start = new DXFPoint();
+
         public DXFPoint Start { get { return start; } }
 
+
         private DXFPoint end = new DXFPoint();
+
         public DXFPoint End { get { return end; } }
 
         public double Thickness { get; set; }
 
-        private DXFPoint extrusion = new DXFPoint();
+        private DXFPoint extrusion = new DXFPoint() { X = 0, Y = 0, Z = 1 };
+
         public DXFPoint ExtrusionDirection { get { return extrusion; } }
 
         public override void ParseGroupCode(int groupcode, string value)

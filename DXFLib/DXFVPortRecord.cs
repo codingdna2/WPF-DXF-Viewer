@@ -1,44 +1,69 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DXFLib
+﻿namespace DXFLib
 {
     public class DXFVPortRecord : DXFRecord
     {
         public string VPortName { get; set; }
+
         private DXFPoint lowerleft = new DXFPoint();
+
         public DXFPoint LowerLeftCorner { get { return lowerleft; } }
+
         private DXFPoint upperright = new DXFPoint();
+
         public DXFPoint UpperRightCorner { get { return upperright; } }
+
         private DXFPoint center = new DXFPoint();
+
         public DXFPoint Center { get { return center; } }
+
         private DXFPoint snapbase = new DXFPoint();
+
         public DXFPoint SnapBase { get { return snapbase; } }
+
         private DXFPoint snapspacing = new DXFPoint();
+
         public DXFPoint SnapSpacing { get { return snapspacing; } }
+
         private DXFPoint gridspacing = new DXFPoint();
+
         public DXFPoint GridSpacing { get { return gridspacing; } }
+
         private DXFPoint direction = new DXFPoint();
+
         public DXFPoint Direction { get { return direction; } }
+
         private DXFPoint target = new DXFPoint();
+
         public DXFPoint Target { get { return target; } }
 
         public double Height { get; set; }
+
         public double AspectRatio { get; set; }
+
         public double LensLength { get; set; }
+
         public double FrontClippingPlane { get; set; }
+
         public double BackClippingPlane { get; set; }
+
         public double SnapRotationAngle { get; set; }
+
         public double TwistAngle { get; set; }
+
         public int ViewMode { get; set; }
+
         public int CircleZoomPercent { get; set; }
+
         public int FastZoomSetting { get; set; }
+
         public int UCSICONSetting { get; set; }
+
         public int SnapEnabled { get; set; }
+
         public int GridEnabled { get; set; }
+
         public int SnapStyle { get; set; }
+
         public int SnapIsoPair { get; set; }
 
     }
@@ -46,6 +71,7 @@ namespace DXFLib
     class DXFVPortRecordParser : DXFRecordParser
     {
         private DXFVPortRecord _record;
+
         protected override DXFRecord currentRecord
         {
             get { return _record; }

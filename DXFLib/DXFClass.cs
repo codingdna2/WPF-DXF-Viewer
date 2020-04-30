@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace DXFLib
 {
@@ -25,10 +22,15 @@ namespace DXFLib
         }
 
         public string DXFRecord { get; set; }
+
         public string AppName { get; set; }
+
         public string ClassName { get; set; }
+
         public Caps? ClassProxyCapabilities { get; set; }
+
         public bool? WasProxy { get; set; }
+
         public bool? IsEntity { get; set; }
     }
 }

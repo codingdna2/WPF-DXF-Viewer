@@ -1,18 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DXFLib
+﻿namespace DXFLib
 {
     public class DXFUCSRecord : DXFRecord
     {
         public string UCSName { get; set; }
+
         private DXFPoint origin = new DXFPoint();
+
         public DXFPoint Origin { get { return origin; } }
-        private DXFPoint xaxis=new DXFPoint();
+
+        private DXFPoint xaxis = new DXFPoint();
+
         public DXFPoint XAxis { get { return xaxis; } }
+
         private DXFPoint yaxis = new DXFPoint();
+
         public DXFPoint YAxis { get { return yaxis; } }
 
         public override string ToString()

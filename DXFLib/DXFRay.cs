@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DXFLib
+﻿namespace DXFLib
 {
     [Entity("RAY")]
     public class DXFRay : DXFEntity
     {
         private DXFPoint startpoint = new DXFPoint();
+
         public DXFPoint Start { get { return startpoint; } }
 
+
         private DXFPoint direction = new DXFPoint();
+
         public DXFPoint Direction { get { return direction; } }
 
         public override void ParseGroupCode(int groupcode, string value)

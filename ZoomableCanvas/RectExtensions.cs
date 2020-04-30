@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace System.Windows
+﻿namespace System.Windows
 {
     /// <summary>
     /// Provides extension methods for rects.
     /// </summary>
 	public static class RectExtensions
-	{
+    {
         /// <summary>
         /// Returns the center point of the <see cref="Rect"/>.
         /// </summary>
@@ -46,5 +44,5 @@ namespace System.Windows
                 && (self.Height == Double.PositiveInfinity || self.Bottom >= rect.Top)
                 && (rect.Height == Double.PositiveInfinity || rect.Bottom >= self.Top);
         }
-	}
+    }
 }

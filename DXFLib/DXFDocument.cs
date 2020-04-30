@@ -1,24 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.IO;
-using System.Threading;
+using System.Diagnostics;
 using System.Globalization;
+using System.IO;
+using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace DXFLib
 {
+    //https://documentation.help/AutoCAD-DXF/
     public class DXFDocument
     {
         private DXFHeader header = new DXFHeader();
+
         public DXFHeader Header { get { return header; } }
+
         private List<DXFClass> classes = new List<DXFClass>();
+
         public List<DXFClass> Classes { get { return classes; } }
+
         private List<DXFBlock> blocks = new List<DXFBlock>();
+
         public List<DXFBlock> Blocks { get { return blocks; } }
+
         private DXFTables tables = new DXFTables();
+
         public DXFTables Tables { get { return tables; } }
+
         private List<DXFEntity> entities = new List<DXFEntity>();
+
         public List<DXFEntity> Entities { get { return entities; } }
 
         public DXFDocument()
@@ -71,7 +81,8 @@ namespace DXFLib
                             state = LoadState.InSection;
                             reader.ReadDXFEntry(out groupcode, out value);
                             if (groupcode != 2)
-                                throw new Exception("Sektion gefunden aber keinen Namen zur Sektion");
+                                throw new InvalidDataException("Section with no name found");
+
                             value = value.Trim();
                             if (sectionparsers.ContainsKey(value))
                                 currentParser = sectionparsers[value];
@@ -87,16 +98,7 @@ namespace DXFLib
                             {
                                 if (!versionwarningsent)
                                 {
-                                    try
-                                    {
-                                        if (OnFileVersionIncompatible != null)
-                                            OnFileVersionIncompatible(this, EventArgs.Empty);
-
-                                    }
-                                    catch (Exception)
-                                    {
-
-                                    } 
+                                    OnFileVersionIncompatible?.Invoke(this, EventArgs.Empty);
                                     versionwarningsent = true;
                                 }
                             }
@@ -115,7 +117,8 @@ namespace DXFLib
                 reader.ReadDXFEntry(out groupcode, out value);
             }
             if (state == LoadState.InSection)
-                throw new Exception("Dateiende erreicht aber immer noch offene Sektion vorhanden");
+                throw new InvalidDataException("End of file reached with an open section");
+
             Thread.CurrentThread.CurrentCulture = currentCulture;
         }
     }

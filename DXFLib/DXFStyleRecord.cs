@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace DXFLib
 {
     public class DXFStyleRecord : DXFRecord
     {
         public string StyleName { get; set; }
+
         public double FixedHeight { get; set; }
+
         public double WidthFactor { get; set; }
+
         public double ObliqueAngle { get; set; }
 
         public override string ToString()
@@ -20,14 +20,16 @@ namespace DXFLib
         [Flags]
         public enum TextGenerationFlags
         {
-            MirrorX=2,
-            MirrorY=4
+            MirrorX = 2,
+            MirrorY = 4
         }
 
         public TextGenerationFlags GenerationFlags { get; set; }
 
         public double LastUsedHeight { get; set; }
+
         public string FontFileName { get; set; }
+
         public string BigFontFileName { get; set; }
     }
 

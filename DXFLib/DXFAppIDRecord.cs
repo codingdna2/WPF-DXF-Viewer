@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DXFLib
+﻿namespace DXFLib
 {
     public class DXFAppIDRecord : DXFRecord
     {
@@ -33,6 +28,7 @@ namespace DXFLib
         #endregion
 
         DXFAppIDRecord _currentRecord;
+
         protected override DXFRecord currentRecord
         {
             get { return _currentRecord; }

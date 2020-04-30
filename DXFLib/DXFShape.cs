@@ -1,22 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DXFLib
+﻿namespace DXFLib
 {
     [Entity("SHAPE")]
     class DXFShape : DXFEntity
     {
         public double Thickness { get; set; }
+
         private DXFPoint insertion = new DXFPoint();
+
         public DXFPoint InsertionPoint { get { return insertion; } }
+
         public double Size { get; set; }
+
         public string ShapeName { get; set; }
+
         public double RotationAngle { get; set; }
+
         public double RelativeXScale { get; set; }
+
         public double ObliqueAngle { get; set; }
-        private DXFPoint extrusion = new DXFPoint();
+
+        private DXFPoint extrusion = new DXFPoint() { X = 0, Y = 0, Z = 1 };
+
         public DXFPoint ExtrusionDirection { get { return extrusion; } }
 
         public override void ParseGroupCode(int groupcode, string value)

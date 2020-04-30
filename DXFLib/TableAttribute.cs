@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace DXFLib
 {
@@ -9,6 +6,7 @@ namespace DXFLib
     class TableAttribute : Attribute
     {
         public string TableName;
+
         public Type TableParser;
 
         public TableAttribute(string name, Type parser)

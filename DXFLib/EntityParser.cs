@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Reflection;
 
 namespace DXFLib
@@ -9,8 +7,11 @@ namespace DXFLib
     class EntityParser : ISectionParser
     {
         private Dictionary<string, Type> Entities = new Dictionary<string, Type>();
+
         private DXFEntity currentEntity = null;
+
         private Stack<DXFEntity> stack = new Stack<DXFEntity>();
+
         #region ISectionParser Member
 
         public void ParseGroupCode(DXFDocument doc, int groupcode, string value)
@@ -22,7 +23,7 @@ namespace DXFLib
                     if (t.IsClass && !t.IsAbstract)
                     {
                         object[] attrs = t.GetCustomAttributes(false);
-                        foreach(object attr in attrs)
+                        foreach (object attr in attrs)
                         {
                             EntityAttribute casted = attr as EntityAttribute;
                             if (casted != null)
@@ -42,12 +43,12 @@ namespace DXFLib
                 }
                 if (Entities.ContainsKey(value))
                 {
-                    if (currentEntity!=null && currentEntity.HasChildren)
+                    if (currentEntity != null && currentEntity.HasChildren)
                     {
                         stack.Push(currentEntity);
                     }
                     currentEntity = Activator.CreateInstance(Entities[value]) as DXFEntity;
-                    if (stack.Count>0 && stack.Peek().HasChildren)
+                    if (stack.Count > 0 && stack.Peek().HasChildren)
                     {
                         stack.Peek().Children.Add(currentEntity);
                     }

@@ -1,26 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DXFLib
+﻿namespace DXFLib
 {
     public class DXFViewRecord : DXFRecord
     {
         public string ViewPortName { get; set; }
+
         public double Height { get; set; }
+
         public double Width { get; set; }
+
         private DXFPoint center = new DXFPoint();
+
         public DXFPoint Center { get { return center; } }
+
         private DXFPoint direction = new DXFPoint();
+
         public DXFPoint Direction { get { return direction; } }
+
         private DXFPoint target = new DXFPoint();
+
         public DXFPoint Target { get { return target; } }
 
         public double FrontClippingPlane { get; set; }
+
         public double BackClippingPlane { get; set; }
+
         public double TwistAngle { get; set; }
+
         public double LensLength { get; set; }
+
         public int ViewMode { get; set; }
     }
 

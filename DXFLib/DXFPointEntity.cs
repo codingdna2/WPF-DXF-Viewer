@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DXFLib
+﻿namespace DXFLib
 {
     [Entity("POINT")]
     public class DXFPointEntity : DXFEntity
     {
         private DXFPoint location = new DXFPoint();
+
         public DXFPoint Location { get { return location; } }
 
         public double Thickness { get; set; }
 
-        private DXFPoint extrusion = new DXFPoint();
+        private DXFPoint extrusion = new DXFPoint() { X = 0, Y = 0, Z = 1 };
+
         public DXFPoint ExtrusionDirection { get { return extrusion; } }
 
         public double XAxisAngle { get; set; }

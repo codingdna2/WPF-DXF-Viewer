@@ -1,25 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace DXFLib
 {
     public class DXFEntity
     {
         public string EntityType { get; set; }
+
         public string Handle { get; set; }
+
         private List<string> classhierarchy = new List<string>();
+
         public List<string> ClassHierarchy { get { return classhierarchy; } }
+
         public bool IsInPaperSpace { get; set; }
+
         public string LayerName { get; set; }
+
         public string LineType { get; set; }
+
         public int ColorNumber { get; set; }
+
         public double LineTypeScale { get; set; }
+
         public bool IsInvisible { get; set; }
 
         public virtual bool HasChildren { get { return (children != null && children.Count > 0); } }
+
         private List<DXFEntity> children = new List<DXFEntity>();
+
         public List<DXFEntity> Children { get { return children; } }
 
         public virtual void ParseGroupCode(int groupcode, string value)

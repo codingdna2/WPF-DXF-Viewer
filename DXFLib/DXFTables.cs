@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace DXFLib
 {
     public class DXFTables
     {
         private List<DXFAppIDRecord> appids = new List<DXFAppIDRecord>();
-        [Table("APPID",typeof(DXFAppIDParser))]
+        [Table("APPID", typeof(DXFAppIDParser))]
         public List<DXFAppIDRecord> AppIDs { get { return appids; } }
 
         private List<DXFBlockRecord> blocks = new List<DXFBlockRecord>();

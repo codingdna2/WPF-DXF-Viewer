@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Reflection;
 
 namespace DXFLib
 {
-    class HeaderParser: ISectionParser
+    class HeaderParser : ISectionParser
     {
         private Dictionary<string, PropertyInfo> fields = new Dictionary<string, PropertyInfo>();
+
         #region ISectionParser Member
 
         PropertyInfo currentVar = null;
@@ -46,7 +46,7 @@ namespace DXFLib
                     currentVar = null;
                 }
             }
-            else if(currentVar!=null)
+            else if (currentVar != null)
             {
                 //at first we need to differentiate the types: nullable vs string and nullable vs rest
                 if (currentVar.PropertyType.Equals(typeof(string)))
@@ -56,7 +56,7 @@ namespace DXFLib
                 else if (currentVar.PropertyType.IsGenericType && currentVar.PropertyType.GetGenericTypeDefinition().Equals(typeof(Nullable<>)))
                 {
                     Type boxedType = currentVar.PropertyType.GetGenericArguments()[0];
-                    if(boxedType.Equals(typeof(int)))
+                    if (boxedType.Equals(typeof(int)))
                     {
                         int? parsed;
                         if (value.ToLower().Contains('a') ||
@@ -72,7 +72,7 @@ namespace DXFLib
                             parsed = int.Parse(value, System.Globalization.NumberStyles.Any);
                         currentVar.SetValue(doc.Header, parsed, null);
                     }
-                    else if(boxedType.Equals(typeof(double)))
+                    else if (boxedType.Equals(typeof(double)))
                     {
                         double? parsed = double.Parse(value);
                         currentVar.SetValue(doc.Header, parsed, null);

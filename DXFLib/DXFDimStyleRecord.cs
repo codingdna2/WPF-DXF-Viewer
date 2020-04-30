@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DXFLib
+﻿namespace DXFLib
 {
+    //https://ezdxf.readthedocs.io/en/stable/_images/dimvars1.svg
     public class DXFDimStyleRecord : DXFRecord
     {
         public string StyleName { get; set; }
-        //TODO: weitere Felder unterstützen
+
+        public int DimensionLineWeight { get; set; }
+
+        public string DimensionLineType { get; set; }
+
+        //TODO: Include more fields
 
         public override string ToString()
         {
@@ -33,8 +34,20 @@ namespace DXFLib
         public override void ParseGroupCode(DXFDocument doc, int groupcode, string value)
         {
             base.ParseGroupCode(doc, groupcode, value);
-            if (groupcode == 2)
-                _record.StyleName = value;
+            switch (groupcode)
+            {
+                case 2:
+                    _record.StyleName = value;
+                    break;
+
+                case 345:
+                    _record.DimensionLineType = value;
+                    break;
+
+                case 371:
+                    _record.DimensionLineWeight = int.Parse(value);
+                    break;
+            }
         }
     }
 

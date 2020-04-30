@@ -1,16 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace DXFLib
 {
     [Entity("TRACE")]
     public class DXFTrace : DXFEntity
     {
-        private DXFPoint extrusion = new DXFPoint();
+        private DXFPoint extrusion = new DXFPoint() { X = 0, Y = 0, Z = 1 };
+
         public DXFPoint ExtrusionDirection { get { return extrusion; } }
-        private DXFPoint[] corners = new DXFPoint[] { new DXFPoint(), new DXFPoint(), new DXFPoint(), new DXFPoint() };
+
+        private DXFPoint[] corners = new DXFPoint[] { new DXFPoint(), new DXFPoint(), new DXFPoint() };
+
         public DXFPoint[] Corners { get { return corners; } }
 
         public double Thickness { get; set; }
@@ -21,6 +21,15 @@ namespace DXFLib
             if (groupcode >= 10 && groupcode <= 33)
             {
                 int idx = groupcode % 10;
+                if (idx >= corners.Length)
+                {
+                    int oldLength = corners.Length;
+                    Array.Resize(ref corners, idx + 1);
+                    for (int i = oldLength - 1; i < idx + 1; i++)
+                    {
+                        corners[i] = new DXFPoint();
+                    }
+                }
                 int component = groupcode / 10;
                 switch (component)
                 {

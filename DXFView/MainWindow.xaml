@@ -1,0 +1,51 @@
+﻿<Window x:Class="DxfEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxf="clr-namespace:DXFViewer;assembly=DXFViewer"
+        Title="MainWindow"
+        Width="800"
+        Height="450">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ToolBarTray Grid.Row="0">
+            <ToolBar>
+                <Label Content="DXF Viewer:" />
+                <Button Click="OnClickOpen">
+                    <Image Height="16" Source="pack://application:,,,/Images/folder_document.png" />
+                </Button>
+                <Separator />
+                <Button Click="OnClickZoomExtents">
+                    <Image Height="16" Source="pack://application:,,,/Images/window_view.png" />
+                </Button>
+                <Button Click="OnClickZoomIn">
+                    <Image Height="16" Source="pack://application:,,,/Images/zoom_in.png" />
+                </Button>
+                <Button Click="OnClickZoomOut">
+                    <Image Height="16" Source="pack://application:,,,/Images/zoom_out.png" />
+                </Button>
+                <ToggleButton x:Name="btnPan">
+                    <Image Height="16" Source="pack://application:,,,/Images/hand.png" />
+                </ToggleButton>
+                <Separator />
+                <Label x:Name="lblPosition" Content="{Binding MousePosition, ElementName=viewer}" />
+            </ToolBar>
+        </ToolBarTray>
+
+        <Grid Grid.Row="1"
+              Background="White"
+              ClipToBounds="True">
+            <dxf:Viewer x:Name="viewer"
+                        FileName="DXF/heart.dxf"
+                        PanEnabled="{Binding IsChecked, ElementName=btnPan}" />
+        </Grid>
+
+    </Grid>
+</Window>

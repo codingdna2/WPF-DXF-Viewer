@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Windows;
 
 namespace System.Collections.Generic
@@ -17,7 +16,7 @@ namespace System.Collections.Generic
     public class PriorityQuadTree<T> : IEnumerable<T>
     {
         /// <summary>
-        /// Each node stored in the tree has a position, width & height.        
+        /// Each node stored in the tree has a position, width & height.
         /// </summary>
         private class QuadNode
         {
@@ -194,16 +193,17 @@ namespace System.Collections.Generic
 
             private QuadNode _nodes; // nodes that overlap the sub quadrant boundaries.
 
-            // The quadrant is subdivided when nodes are inserted that are 
+            // The quadrant is subdivided when nodes are inserted that are
             // completely contained within those subdivisions.
             private Quadrant _topLeft;
+
             private Quadrant _topRight;
             private Quadrant _bottomLeft;
             private Quadrant _bottomRight;
 
             /// <summary>
             /// Construct new Quadrant with a given bounds all nodes stored inside this quadrant
-            /// will fit inside this bounds.  
+            /// will fit inside this bounds.
             /// </summary>
             /// <param name="bounds">The bounds of this quadrant</param>
             public Quadrant(Rect bounds)
@@ -218,7 +218,7 @@ namespace System.Collections.Generic
             /// <param name="bounds">The bounds of that node.</param>
             /// <param name="priority">The priority of that node.</param>
             /// <param name="depth">The recursive depth of this call, to avoid stack overflows.</param>
-            /// <returns>The quadrant that ultimately holds the node.</returns>            
+            /// <returns>The quadrant that ultimately holds the node.</returns>
             internal Quadrant Insert(T node, Rect bounds, double priority, int depth)
             {
                 _potential = Math.Max(_potential, priority);
@@ -623,7 +623,7 @@ namespace System.Collections.Generic
             /// <summary>
             /// Remove the given node from this Quadrant.(non-recursive)
             /// </summary>
-            /// <param name="node">The node to remove.</param>            
+            /// <param name="node">The node to remove.</param>
             /// <returns>Returns true if the node was found and removed.</returns>
             private bool RemoveNode(T node)
             {

@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DXFLib
+﻿namespace DXFLib
 {
     [Entity("INSERT")]
     public class DXFInsert : DXFEntity
     {
         public string BlockName { get; set; }
+
         private DXFPoint insertionPoint = new DXFPoint();
+
         public DXFPoint InsertionPoint { get { return insertionPoint; } }
+
         private DXFPoint scaling = new DXFPoint();
+
         public DXFPoint Scaling { get { return scaling; } }
+
         public double? RotationAngle { get; set; }
-        private DXFPoint extrusionDirection = new DXFPoint();
+
+        private DXFPoint extrusionDirection = new DXFPoint() { X = 0, Y = 0, Z = 1 };
+
         public DXFPoint ExtrusionDirection { get { return extrusionDirection; } }
 
         public override void ParseGroupCode(int groupcode, string value)

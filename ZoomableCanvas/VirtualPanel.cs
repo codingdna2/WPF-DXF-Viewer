@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Specialized;
 using System.Diagnostics.CodeAnalysis;
 using System.Windows.Controls.Primitives;
@@ -15,7 +14,7 @@ namespace System.Windows.Controls
         /// <summary>
         /// Identifies the <see cref="IsVirtualizing"/> property.
         /// </summary>
-        public static readonly DependencyProperty IsVirtualizingProperty = VirtualizingStackPanel.IsVirtualizingProperty.AddOwner(typeof(VirtualPanel), new FrameworkPropertyMetadata(VirtualizingStackPanel.IsVirtualizingProperty.DefaultMetadata.DefaultValue, OnIsVirtualizingChanged));
+        public static readonly new DependencyProperty IsVirtualizingProperty = VirtualizingStackPanel.IsVirtualizingProperty.AddOwner(typeof(VirtualPanel), new FrameworkPropertyMetadata(VirtualizingStackPanel.IsVirtualizingProperty.DefaultMetadata.DefaultValue, OnIsVirtualizingChanged));
 
         /// <summary>
         /// Handles the event that occurs when the value of the <see cref="IsVirtualizing"/> dependency property has changed.
@@ -64,7 +63,7 @@ namespace System.Windows.Controls
         /// </summary>
         private DispatcherOperation RealizeOperation
         {
-            get; 
+            get;
             set;
         }
 
@@ -81,7 +80,7 @@ namespace System.Windows.Controls
         }
 
         /// <summary>
-        /// Returns the index to an item that corresponds to the specified, generated <see cref="UIElement"/>. 
+        /// Returns the index to an item that corresponds to the specified, generated <see cref="UIElement"/>.
         /// </summary>
         /// <param name="container">The <see cref="UIElement"/> that corresponds to the item index to be returned.</param>
         /// <returns>An <see cref="Int32"/> index to an item that corresponds to the specified <see cref="UIElement"/> if it was generated and hosted by this panel; otherwise, <c>-1</c>.</returns>
@@ -104,7 +103,7 @@ namespace System.Windows.Controls
         }
 
         /// <summary>
-        /// Returns the item that corresponds to the specified, generated <see cref="UIElement"/>. 
+        /// Returns the item that corresponds to the specified, generated <see cref="UIElement"/>.
         /// </summary>
         /// <param name="container">The <see cref="UIElement"/> that corresponds to the item to be returned.</param>
         /// <returns>An <see cref="Object"/> that is the item which corresponds to the specified <see cref="UIElement"/> if it was generated and hosted by this panel; otherwise, <c>null</c>.</returns>
@@ -157,7 +156,7 @@ namespace System.Windows.Controls
         }
 
         /// <summary>
-        /// Invalidates the realization state of all items being hosted by this panel. After the invalidation, the panel will have its reality updated, which will occur asynchronously unless subsequently forced by <see cref="UpdateReality"/>. 
+        /// Invalidates the realization state of all items being hosted by this panel. After the invalidation, the panel will have its reality updated, which will occur asynchronously unless subsequently forced by <see cref="UpdateReality"/>.
         /// </summary>
         public void InvalidateReality()
         {
@@ -437,7 +436,7 @@ namespace System.Windows.Controls
         }
 
         /// <summary>
-        /// Returns a list which represents a subset of the elements in the source list. 
+        /// Returns a list which represents a subset of the elements in the source list.
         /// </summary>
         /// <remarks>
         /// This list is used in NotifyCollectionChangedEventArgs because we might be dealing with
@@ -579,7 +578,7 @@ namespace System.Windows.Controls
                 get { return null; }
             }
 
-            #endregion
+            #endregion Unsupported IList Members
         }
     }
 }

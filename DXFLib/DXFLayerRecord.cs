@@ -1,20 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DXFLib
+﻿namespace DXFLib
 {
+    //http://help.autodesk.com/view/ACD/2015/ENU/?guid=GUID-D94802B0-8BE8-4AC9-8054-17197688AFDB
+
     public class DXFLayerRecord : DXFRecord
     {
         public string LayerName { get; set; }
-        public int Color { get; set; }
+
+        public int Color { get; set; } //Color number (if negative, layer is off)
+
         public string LineType { get; set; }
+
+        public int LineWeight { get; set; } // LineWeight => -3 = Standard, -2 = ByLayer, -1 = ByBlock.
 
         public override string ToString()
         {
             return string.Format("Name:{0} LineType:{1}", LayerName, LineType);
-        }
+        }    
     }
 
     class DXFLayerRecordParser : DXFRecordParser
@@ -45,10 +46,10 @@ namespace DXFLib
                 case 6:
                     _record.LineType = value;
                     break;
+                case 370:
+                    _record.LineWeight = int.Parse(value); 
+                    break;
             }
         }
     }
-
-
-
 }

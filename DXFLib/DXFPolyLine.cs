@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace DXFLib
 {
@@ -9,7 +6,9 @@ namespace DXFLib
     public class DXFPolyLine : DXFEntity
     {
         public double Elevation { get; set; }
+
         public double Thickness { get; set; }
+
         [Flags]
         public enum FlagsEnum
         {
@@ -24,15 +23,23 @@ namespace DXFLib
         }
 
         public FlagsEnum Flags { get; set; }
+
         public double DefaultStartWidth { get; set; }
+
         public double DefaultEndWidth { get; set; }
+
         public int MVertexCount { get; set; }
+
         public int NVertexCount { get; set; }
+
         public int SurfaceMDensity { get; set; }
+
         public int SurfaceNDensity { get; set; }
+
         public int CurvesAndSmoothSurfaceType { get; set; }
 
-        private DXFPoint extrusion = new DXFPoint();
+        private DXFPoint extrusion = new DXFPoint() { X = 0, Y = 0, Z = 1 };
+
         public DXFPoint ExtrusionDirection { get { return extrusion; } }
 
         public override bool HasChildren

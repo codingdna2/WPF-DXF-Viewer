@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace DXFLib
 {
@@ -10,10 +7,15 @@ namespace DXFLib
         #region ISectionParser Member
 
         private DXFBlock current = null;
+
         private bool parsingBlock = false;
+
         private EntityParser parser = new EntityParser();
+
         private DXFDocument container;
+
         public static List<string> groups = new List<string>();
+
         public void ParseGroupCode(DXFDocument doc, int groupcode, string value)
         {
             if (groupcode == 0)

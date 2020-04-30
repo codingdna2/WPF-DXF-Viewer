@@ -19,7 +19,7 @@
             {
                 throw new ArgumentNullException("list");
             }
-            
+
             if (node == null)
             {
                 return list.Find(value);

@@ -1,20 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Reflection;
 
 namespace DXFLib
 {
-    class TableParser: ISectionParser
+    class TableParser : ISectionParser
     {
         private Dictionary<string, ISectionParser> tablehandlers = new Dictionary<string, ISectionParser>();
+
         #region ISectionParser Member
 
         private ISectionParser currentParser = null;
+
         private bool waitingtableheader = false;
+
         private bool ignoretable = false;
+
         private bool firstrecordfound = false;
+
         public void ParseGroupCode(DXFDocument doc, int groupcode, string value)
         {
             if (tablehandlers.Count == 0)
@@ -83,7 +86,9 @@ namespace DXFLib
     public class DXFRecord
     {
         public string Handle { get; set; }
+
         public string DimStyleHandle { get; set; }
+
         List<string> classhierarchy = new List<string>();
         public List<string> Classhierarchy { get { return classhierarchy; } }
 

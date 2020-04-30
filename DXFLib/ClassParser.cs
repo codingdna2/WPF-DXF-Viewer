@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace DXFLib
 {
     class ClassParser : ISectionParser
     {
         private DXFClass currentClass;
+
         #region ISectionParser Member
 
         public void ParseGroupCode(DXFDocument doc, int groupcode, string value)

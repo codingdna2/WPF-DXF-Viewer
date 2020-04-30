@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace DXFLib
 {
@@ -20,9 +17,15 @@ namespace DXFLib
                 GroupCode = g;
                 Value = v;
             }
+
+            public override string ToString()
+            {
+                return $"GroupCode:{GroupCode} Value:{Value}";
+            }
         }
 
         private List<Entry> entries = new List<Entry>();
+
         public List<Entry> Entries { get { return entries; } }
 
         public override void ParseGroupCode(int groupcode, string value)

@@ -9,6 +9,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
 
+[assembly: CLSCompliant(true)]
+
 namespace System.Windows.Controls
 {
     /// <summary>
@@ -31,8 +33,7 @@ namespace System.Windows.Controls
         /// <returns>A new transform if <see cref="ApplyTransform"/> is set to <c>true</c>; otherwise, <paramref name="value"/>.</returns>
         private static object CoerceRenderTransform(DependencyObject d, object value)
         {
-            var canvas = d as ZoomableCanvas;
-            if (canvas != null && canvas.ApplyTransform)
+            if (d is ZoomableCanvas canvas && canvas.ApplyTransform)
             {
                 var transform = new TransformGroup();
                 transform.Children.Add(new ScaleTransform());
@@ -84,7 +85,7 @@ namespace System.Windows.Controls
             set { SetValue(ApplyTransformProperty, value); }
         }
 
-        #endregion
+        #endregion ApplyTransformProperty
 
         #region ActualViewboxProperty
 
@@ -101,8 +102,7 @@ namespace System.Windows.Controls
         /// <returns>A <see cref="Rect"/> representing the area of the canvas (in canvas coordinates) that is being displayed by this panel.</returns>
         private static object CoerceActualViewbox(DependencyObject d, object value)
         {
-            var canvas = d as ZoomableCanvas;
-            if (canvas != null)
+            if (d is ZoomableCanvas canvas)
             {
                 var offset = canvas.Offset;
                 var scale = canvas.Scale;
@@ -120,13 +120,11 @@ namespace System.Windows.Controls
         /// <param name="e">The event args containing the old and new values of the dependency property.</param>
         private static void OnActualViewboxChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            var canvas = d as ZoomableCanvas;
-            if (canvas != null)
+            if (d is ZoomableCanvas canvas)
             {
                 canvas.InvalidateReality();
             }
-            var scrollInfo = d as IScrollInfo;
-            if (scrollInfo != null && scrollInfo.ScrollOwner != null)
+            if (d is IScrollInfo scrollInfo && scrollInfo.ScrollOwner != null)
             {
                 scrollInfo.ScrollOwner.InvalidateScrollInfo();
             }
@@ -146,7 +144,7 @@ namespace System.Windows.Controls
             get { return (Rect)GetValue(ActualViewboxProperty); }
         }
 
-        #endregion
+        #endregion ActualViewboxProperty
 
         #region ViewboxProperty
 
@@ -163,7 +161,7 @@ namespace System.Windows.Controls
         private static bool IsViewboxValid(object value)
         {
             var viewbox = (Rect)value;
-            return viewbox.IsEmpty 
+            return viewbox.IsEmpty
                 || (viewbox.X.IsBetween(Double.MinValue, Double.MaxValue)
                 && viewbox.Y.IsBetween(Double.MinValue, Double.MaxValue)
                 && viewbox.Width.IsBetween(Double.Epsilon, Double.MaxValue)
@@ -200,7 +198,7 @@ namespace System.Windows.Controls
             set { SetValue(ViewboxProperty, value); }
         }
 
-        #endregion
+        #endregion ViewboxProperty
 
         #region StretchProperty
 
@@ -249,7 +247,7 @@ namespace System.Windows.Controls
             set { SetValue(StretchProperty, value); }
         }
 
-        #endregion
+        #endregion StretchProperty
 
         #region StretchDirectionProperty
 
@@ -297,7 +295,7 @@ namespace System.Windows.Controls
             set { SetValue(StretchDirectionProperty, value); }
         }
 
-        #endregion
+        #endregion StretchDirectionProperty
 
         #region OffsetProperty
 
@@ -326,8 +324,7 @@ namespace System.Windows.Controls
         /// <returns>A <see cref="Point"/> representing top-left point of the canvas (in canvas coordinates) that is currently being displayed.</returns>
         private static object CoerceOffset(DependencyObject d, object value)
         {
-            var canvas = d as ZoomableCanvas;
-            if (canvas != null)
+            if (d is ZoomableCanvas canvas)
             {
                 var viewbox = canvas.Viewbox;
                 if (!viewbox.IsEmpty)
@@ -350,8 +347,7 @@ namespace System.Windows.Controls
         {
             d.CoerceValue(ActualViewboxProperty);
 
-            var canvas = d as ZoomableCanvas;
-            if (canvas != null)
+            if (d is ZoomableCanvas canvas)
             {
                 canvas.OffsetOverride((Point)e.NewValue);
             }
@@ -395,7 +391,7 @@ namespace System.Windows.Controls
             set { SetValue(OffsetProperty, value); }
         }
 
-        #endregion
+        #endregion OffsetProperty
 
         #region ScaleProperty
 
@@ -424,8 +420,7 @@ namespace System.Windows.Controls
         {
             var scale = (double)value;
 
-            var canvas = d as ZoomableCanvas;
-            if (canvas != null)
+            if (d is ZoomableCanvas canvas)
             {
                 var renderSize = canvas.RenderSize;
                 if (renderSize.Width > 0 && renderSize.Height > 0)
@@ -471,8 +466,7 @@ namespace System.Windows.Controls
             d.CoerceValue(ActualViewboxProperty);
             d.CoerceValue(OffsetProperty);
 
-            var canvas = d as ZoomableCanvas;
-            if (canvas != null)
+            if (d is ZoomableCanvas canvas)
             {
                 canvas.ScaleOverride((double)e.NewValue);
             }
@@ -509,7 +503,7 @@ namespace System.Windows.Controls
             set { SetValue(ScaleProperty, value); }
         }
 
-        #endregion
+        #endregion ScaleProperty
 
         #region RealizationLimitProperty
 
@@ -535,11 +529,10 @@ namespace System.Windows.Controls
         /// <param name="e">The event args containing the old and new values of the dependency property.</param>
         private static void OnRealizationLimitChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            var canvas = d as ZoomableCanvas;
-            if (canvas != null)
+            if (d is ZoomableCanvas canvas)
             {
                 canvas.InvalidateReality();
-            }            
+            }
         }
 
         /// <summary>
@@ -555,7 +548,7 @@ namespace System.Windows.Controls
             set { SetValue(RealizationLimitProperty, value); }
         }
 
-        #endregion
+        #endregion RealizationLimitProperty
 
         #region RealizationRateProperty
 
@@ -581,8 +574,7 @@ namespace System.Windows.Controls
         /// <param name="e">The event args containing the old and new values of the dependency property.</param>
         private static void OnRealizationRateChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            var canvas = d as ZoomableCanvas;
-            if (canvas != null)
+            if (d is ZoomableCanvas canvas)
             {
                 canvas.InvalidateReality();
             }
@@ -603,7 +595,7 @@ namespace System.Windows.Controls
             set { SetValue(RealizationRateProperty, value); }
         }
 
-        #endregion
+        #endregion RealizationRateProperty
 
         #region Initialization
 
@@ -639,7 +631,7 @@ namespace System.Windows.Controls
             CoerceValue(RenderTransformProperty);
         }
 
-        #endregion
+        #endregion Initialization
 
         #region Spatial Item Management
 
@@ -757,14 +749,14 @@ namespace System.Windows.Controls
             /// <summary>
             /// Get a list of the items that intersect the given bounds.
             /// </summary>
-            /// <param name="bounds">The bounds to test.</param>
+            /// <param name="rectangle">The bounds to test.</param>
             /// <returns>
             /// List of zero or more items that intersect the given bounds, returned in the order given by the priority assigned during Insert.
             /// </returns>
-            public IEnumerable<int> Query(Rect bounds)
+            public IEnumerable<int> Query(Rect rectangle)
             {
-                _lastQuery = bounds;
-                return _tree.GetItemsIntersecting(bounds).Select(i => i.Index);
+                _lastQuery = rectangle;
+                return _tree.GetItemsIntersecting(rectangle).Select(i => i.Index);
             }
 
             /// <summary>
@@ -810,10 +802,7 @@ namespace System.Windows.Controls
                         _tree.Insert(item, value, value.IsEmpty ? Double.PositiveInfinity : value.Width + value.Height);
                         item.Bounds = value;
 
-                        if (ExtentChanged != null)
-                        {
-                            ExtentChanged(this, EventArgs.Empty);
-                        }
+                        ExtentChanged?.Invoke(this, EventArgs.Empty);
 
                         if (QueryInvalidated != null && (bounds.IntersectsWith(_lastQuery) || value.IntersectsWith(_lastQuery)))
                         {
@@ -838,14 +827,11 @@ namespace System.Windows.Controls
                 {
                     items[i] = new SpatialItem();
                     items[i].Index = index + i;
-                    _tree.Insert(items[i], Rect.Empty, Double.PositiveInfinity);
+                    _tree.Insert(items[i], Rect.Empty, double.PositiveInfinity);
                 }
                 _items.InsertRange(index, items);
 
-                if (QueryInvalidated != null)
-                {
-                    QueryInvalidated(this, EventArgs.Empty);
-                }
+                QueryInvalidated?.Invoke(this, EventArgs.Empty);
             }
 
             /// <summary>
@@ -869,15 +855,9 @@ namespace System.Windows.Controls
                 _items.RemoveRange(index, count);
                 _extent = Rect.Empty;
 
-                if (ExtentChanged != null)
-                {
-                    ExtentChanged(this, EventArgs.Empty);
-                }
+                ExtentChanged?.Invoke(this, EventArgs.Empty);
 
-                if (QueryInvalidated != null)
-                {
-                    QueryInvalidated(this, EventArgs.Empty);
-                }
+                QueryInvalidated?.Invoke(this, EventArgs.Empty);
             }
 
             /// <summary>
@@ -890,15 +870,9 @@ namespace System.Windows.Controls
                 _items.Clear();
                 InsertRange(0, count);
 
-                if (ExtentChanged != null)
-                {
-                    ExtentChanged(this, EventArgs.Empty);
-                }
+                ExtentChanged?.Invoke(this, EventArgs.Empty);
 
-                if (QueryInvalidated != null)
-                {
-                    QueryInvalidated(this, EventArgs.Empty);
-                }
+                QueryInvalidated?.Invoke(this, EventArgs.Empty);
             }
 
             /// <summary>
@@ -915,15 +889,12 @@ namespace System.Windows.Controls
                 {
                     _tree.Extent = realExtent;
 
-                    if (QueryInvalidated != null)
-                    {
-                        QueryInvalidated(this, EventArgs.Empty);
-                    }
+                    QueryInvalidated?.Invoke(this, EventArgs.Empty);
                 }
             }
         }
 
-        #endregion
+        #endregion Private SpatialIndex Implementation
 
         /// <summary>
         /// Two-dimentional spatial index of our data items.
@@ -965,7 +936,7 @@ namespace System.Windows.Controls
         {
             if (args == null)
             {
-                throw new ArgumentNullException("args");
+                throw new ArgumentNullException(nameof(args));
             }
 
             if (args.Action == NotifyCollectionChangedAction.Add)
@@ -1059,7 +1030,7 @@ namespace System.Windows.Controls
             RealizedItems = null;
             SpatialIndex = null;
             PrivateIndex = null;
-            
+
             if (IsVirtualizing && IsItemsHost && ItemsOwner != null)
             {
                 RealizedItems = new LinkedList<int>();
@@ -1099,12 +1070,12 @@ namespace System.Windows.Controls
             InvalidateExtent();
         }
 
-        #endregion
+        #endregion Spatial Item Management
 
         #region Virtualization
 
         /// <summary>
-        /// Performs realization and virtualization in batches based on the <see cref="RealizationRate"/>. 
+        /// Performs realization and virtualization in batches based on the <see cref="RealizationRate"/>.
         /// </summary>
         /// <param name="items">The current items being hosted by this panel.</param>
         /// <param name="state">The previous return value of this method.</param>
@@ -1220,7 +1191,7 @@ namespace System.Windows.Controls
             }
         }
 
-        #endregion
+        #endregion Virtualization
 
         #region Arrange Logic
 
@@ -1245,15 +1216,13 @@ namespace System.Windows.Controls
         private static void OnPositioningChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var parent = VisualTreeHelper.GetParent(d);
-            var zoomable = parent as ZoomableCanvas;
-            if (zoomable != null)
+            if (parent is ZoomableCanvas zoomable)
             {
                 zoomable.InvalidateArrange();
             }
             else
             {
-                var regular = parent as Canvas;
-                if (regular != null)
+                if (parent is Canvas regular)
                 {
                     regular.InvalidateArrange();
                 }
@@ -1408,7 +1377,7 @@ namespace System.Windows.Controls
         }
 
         /// <summary>
-        /// Returns a clipping geometry that indicates the area that will be clipped if the <see cref="UIElement.ClipToBounds"/> property is set to <c>true</c>. 
+        /// Returns a clipping geometry that indicates the area that will be clipped if the <see cref="UIElement.ClipToBounds"/> property is set to <c>true</c>.
         /// </summary>
         /// <param name="layoutSlotSize">The available size of the element.</param>
         /// <returns>A <see cref="Geometry"/> that represents the area that is clipped if <see cref="UIElement.ClipToBounds"/> is <c>true</c>.</returns>
@@ -1418,7 +1387,7 @@ namespace System.Windows.Controls
             return ClipToBounds ? new RectangleGeometry(new Rect(RenderSize)) : null;
         }
 
-        #endregion
+        #endregion Arrange Logic
 
         #region Utility Methods
 
@@ -1502,7 +1471,7 @@ namespace System.Windows.Controls
             }
         }
 
-        #endregion
+        #endregion Utility Methods
 
         #region IScrollInfo Implementation
 
@@ -1719,6 +1688,6 @@ namespace System.Windows.Controls
             return rectangle;
         }
 
-        #endregion
+        #endregion IScrollInfo Implementation
     }
 }

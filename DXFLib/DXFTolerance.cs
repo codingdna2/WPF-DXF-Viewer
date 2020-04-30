@@ -1,19 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DXFLib
+﻿namespace DXFLib
 {
     [Entity("TOLERANCE")]
     public class DXFTolerance : DXFEntity
     {
         public string DimensionStyle { get; set; }
+
         private DXFPoint insertion = new DXFPoint();
+
         public DXFPoint InsertionPoint { get { return insertion; } }
-        private DXFPoint extrusion = new DXFPoint();
+
+        private DXFPoint extrusion = new DXFPoint() { X = 0, Y = 0, Z = 1 };
+
         public DXFPoint ExtrusionDirection { get { return extrusion; } }
+
         private DXFPoint direction = new DXFPoint();
+
         public DXFPoint Direction { get { return direction; } }
 
         public override void ParseGroupCode(int groupcode, string value)

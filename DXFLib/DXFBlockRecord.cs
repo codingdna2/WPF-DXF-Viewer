@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DXFLib
+﻿namespace DXFLib
 {
     public class DXFBlockRecord : DXFRecord
     {
@@ -18,6 +13,7 @@ namespace DXFLib
     class DXFBlockRecordParser : DXFRecordParser
     {
         private DXFBlockRecord _currentRecord;
+
         protected override DXFRecord currentRecord
         {
             get { return _currentRecord; }
