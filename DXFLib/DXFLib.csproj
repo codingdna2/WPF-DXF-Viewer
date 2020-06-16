@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>Microsoft</Company>
+    <Copyright>Copyright © Microsoft 2010</Copyright>
+    <RepositoryUrl>https://github.com/codingdna2/WPF-DXF-Viewer</RepositoryUrl>
+    <Description>NET Standard Class library for parsing DXF files</Description>
   </PropertyGroup>
 
 </Project>

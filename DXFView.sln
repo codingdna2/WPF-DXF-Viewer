@@ -3,15 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DxfView", "DXFView\DXFView.csproj", "{38B12E17-6974-4514-A892-0F820066B901}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DXFView", "DXFView\DXFView.csproj", "{38B12E17-6974-4514-A892-0F820066B901}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DXFLib", "DXFLib\DXFLib.csproj", "{476FA4C4-FA1D-4A2A-985B-8CBF50F82251}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{10EB7E91-6E50-4B0A-8943-740DAB10168E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomableCanvas", "ZoomableCanvas\ZoomableCanvas.csproj", "{962F5736-02ED-452A-9950-1A9A419ED4B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZoomableCanvas", "ZoomableCanvas\ZoomableCanvas.csproj", "{962F5736-02ED-452A-9950-1A9A419ED4B3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DXFViewer", "DXFViewer\DXFViewer.csproj", "{C5953BF5-A27C-47AC-88CE-38C321171744}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{28D1BAAE-1075-431E-B7B3-24D9EC015630}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

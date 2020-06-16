@@ -3,6 +3,9 @@
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     <UseWPF>true</UseWPF>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/codingdna2/WPF-DXF-Viewer</RepositoryUrl>
+    <Description>A UserControl to enable zooming and panning over a WPF Canvas</Description>
   </PropertyGroup>
 
 </Project>

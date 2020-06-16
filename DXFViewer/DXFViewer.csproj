@@ -4,6 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/codingdna2/WPF-DXF-Viewer</RepositoryUrl>
+    <Description>UserControl to visualize a DXF over a Canvas in WPF</Description>
   </PropertyGroup>
 
   <ItemGroup>
