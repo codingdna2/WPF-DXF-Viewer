@@ -72,9 +72,12 @@ namespace DXFViewer
                     DXFBlock block = document.Blocks.FirstOrDefault(x => x.BlockName == insert.BlockName);
                     if (block != null && block.HasChildren && !block.IsInvisible)
                     {
+                        SolidColorBrush brush = new SolidColorBrush(Colors.Red);
+                        brush.Freeze();
+
                         IList<Shape> blockEntities = new List<Shape>();
                         foreach (DXFEntity blockEntity in block.Children)
-                            ConvertDxfEntityToShapes(document, blockEntity, blockEntities, Brushes.Red);
+                            ConvertDxfEntityToShapes(document, blockEntity, blockEntities, brush);
 
                         double centerX = insert.InsertionPoint.X.Value;
                         double centerY = -insert.InsertionPoint.Y.Value;
@@ -369,8 +372,12 @@ namespace DXFViewer
                     DateTime start = DateTime.UtcNow;
 
                     IList<Shape> shapes = new List<Shape>();
+                    
+                    SolidColorBrush brush = new SolidColorBrush(Colors.SteelBlue);
+                    brush.Freeze();
+
                     foreach (DXFEntity entity in document.Entities)
-                        ConvertDxfEntityToShapes(document, entity, shapes, Brushes.SteelBlue);
+                        ConvertDxfEntityToShapes(document, entity, shapes, brush);
 
                     Debug.WriteLine("Created shapes in {0}ms", DateTime.UtcNow.Subtract(start).TotalMilliseconds);
 

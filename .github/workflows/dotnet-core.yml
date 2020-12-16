@@ -32,4 +32,4 @@ jobs:
         dotnet pack DXFLib/DXFLib.csproj --configuration Release --no-build --output bin/Release/Publish
         dotnet pack DXFViewer/DXFViewer.csproj --configuration Release --no-build --output bin/Release/Publish
     - name: Publish to GitHub
-      run: dotnet nuget push bin/Release/Publish/**/*.nupkg --skip-duplicate -k ${GITHUB_TOKEN} --no-symbols true
+      run: dotnet nuget push bin/Release/Publish/**/*.nupkg --skip-duplicate -k ${{ secrets.GITHUB_TOKEN }} --no-symbols true
