@@ -19,12 +19,16 @@ namespace DXFViewer
 
         public static readonly DependencyProperty PanEnabledProperty = DependencyProperty.Register(nameof(PanEnabled), typeof(bool), typeof(Viewer), new PropertyMetadata(false, new PropertyChangedCallback(OnPanEnabledChanged)));
 
-        private const double zoomExtentsFactor = 0.95;
+        public static readonly DependencyProperty ScaleXProperty = DependencyProperty.Register(nameof(ScaleX), typeof(double), typeof(Viewer), new PropertyMetadata(1.0));
 
-        private string fileName;
+        public static readonly DependencyProperty ScaleYProperty = DependencyProperty.Register(nameof(ScaleY), typeof(double), typeof(Viewer), new PropertyMetadata(1.0));
+
+        private const double zoomExtentsFactor = 0.95;
 
         // Mouse position
         private Point mousePosition;
+
+        private Point canvasPosition;
 
         // Bounding box
         private DXFPoint drawingExtendsUpperRight;
@@ -47,21 +51,37 @@ namespace DXFViewer
 
         #region Properties
 
-        public bool PanEnabled { get; set; }
+        public bool PanEnabled
+        {
+            get => (bool)GetValue(PanEnabledProperty);
+            set => SetValue(PanEnabledProperty, value);
+        }
 
         public string FileName
         {
-            get => fileName;
-            set
-            {
-                fileName = value;
-                LoadBackground();
-            }
+            get => (string)GetValue(FileNameProperty);
+            set => SetValue(FileNameProperty, value);
         }
 
         public Point MousePosition { get => mousePosition; set { mousePosition = value; NotifyPropertyChanged(); } }
 
+        public Point CanvasPosition { get => canvasPosition; set { canvasPosition = value; NotifyPropertyChanged(); } }
+
+        public Point? Offset => canvas?.Offset;
+
         public double StrokeThickness { get => strokeThickness; set { strokeThickness = value; NotifyPropertyChanged(); } }
+
+        public double ScaleX        
+        {
+            get => (double)GetValue(ScaleXProperty);
+            set => SetValue(ScaleXProperty, value);
+        }
+
+        public double ScaleY
+        {
+            get => (double)GetValue(ScaleYProperty);
+            set => SetValue(ScaleYProperty, value);
+        }
 
         #endregion Properties
 
@@ -76,13 +96,13 @@ namespace DXFViewer
         private static void OnFilenameChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var instance = (d as Viewer);
-            instance.FileName = (string)e.NewValue;
+            instance.LoadBackground();
         }
 
         private void LoadBackground()
         {
             canvas.Children.Clear();
-            var dxf = this.ConvertDxf(fileName);
+            var dxf = this.ConvertDxf(FileName);
             if (dxf.Document != null)
             {
                 drawingExtendsUpperRight = dxf.Document.Header.DrawingExtendsUpperRight;
@@ -107,6 +127,9 @@ namespace DXFViewer
                 childCanvas.Children.Add(shape);
             }
 
+            childCanvas.RenderTransform = new ScaleTransform(ScaleX, ScaleY);
+            childCanvas.RenderTransformOrigin = new Point(0.5, 0.5);
+
             return (Document, childCanvas);
         }
 
@@ -118,10 +141,10 @@ namespace DXFViewer
         {
             if (canvas.Children.Count == 0 || drawingExtendsLowerRight == null || drawingExtendsUpperRight == null) return;
 
-            double xMin = Math.Min(drawingExtendsLowerRight.X.Value, drawingExtendsUpperRight.X.Value);  
-            double xMax = Math.Max(drawingExtendsLowerRight.X.Value, drawingExtendsUpperRight.X.Value);  
-            double yMin = Math.Min(-drawingExtendsUpperRight.Y.Value, -drawingExtendsLowerRight.Y.Value); 
-            double yMax = Math.Max(-drawingExtendsUpperRight.Y.Value, -drawingExtendsLowerRight.Y.Value); 
+            double xMin = Math.Min(drawingExtendsLowerRight.X.Value * ScaleX, drawingExtendsUpperRight.X.Value * ScaleX);  
+            double xMax = Math.Max(drawingExtendsLowerRight.X.Value * ScaleX, drawingExtendsUpperRight.X.Value * ScaleX);  
+            double yMin = Math.Min(drawingExtendsUpperRight.Y.Value * -ScaleY, drawingExtendsLowerRight.Y.Value * -ScaleY); 
+            double yMax = Math.Max(drawingExtendsUpperRight.Y.Value * -ScaleY, drawingExtendsLowerRight.Y.Value * -ScaleY);
 
             // Calculate scale
             double scale = Math.Min(canvas.ActualWidth / (xMax - xMin), canvas.ActualHeight / (yMax - yMin)) * zoomExtentsFactor;
@@ -135,6 +158,7 @@ namespace DXFViewer
                     yMin * scale - (canvas.ActualHeight - ((yMax - yMin) * scale)) / 2);
 
                 canvas.Offset = canvas.LayoutTransform.Transform(generalOffset);
+                NotifyPropertyChanged(nameof(Offset));
 
                 StrokeThickness = 1 / canvas.Scale;
             }
@@ -147,6 +171,7 @@ namespace DXFViewer
 
             var position = new Vector(canvas.ActualWidth / 2, canvas.ActualHeight / 2);
             canvas.Offset = (Point)((Vector)(canvas.Offset + position) * x - position);
+            NotifyPropertyChanged(nameof(Offset));
 
             StrokeThickness = 1 / canvas.Scale;
         }
@@ -158,6 +183,7 @@ namespace DXFViewer
 
             var position = new Vector(canvas.ActualWidth / 2, canvas.ActualHeight / 2);
             canvas.Offset = (Point)((Vector)(canvas.Offset + position) * x - position);
+            NotifyPropertyChanged(nameof(Offset));
 
             StrokeThickness = 1 / canvas.Scale;
         }
@@ -171,11 +197,13 @@ namespace DXFViewer
             {
                 this.Cursor = Cursors.Hand;
                 canvas.Offset -= position - MousePosition;
+                NotifyPropertyChanged(nameof(Offset));
 
             }
             else this.Cursor = Cursors.Arrow;
 
             MousePosition = position;
+            CanvasPosition = canvas.GetCanvasPoint(position);
         }
 
         protected override void OnMouseWheel(MouseWheelEventArgs e)
@@ -186,7 +214,7 @@ namespace DXFViewer
             // Adjust the offset to make the point under the mouse stay still.
             var position = (Vector)MousePosition;
             canvas.Offset = (Point)((Vector)(canvas.Offset + position) * x - position);
-
+            NotifyPropertyChanged(nameof(Offset));
 
             StrokeThickness = 1 / canvas.Scale;
         }
