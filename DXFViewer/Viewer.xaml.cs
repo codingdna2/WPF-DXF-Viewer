@@ -36,7 +36,7 @@ namespace DXFViewer
         private DXFPoint drawingExtendsLowerRight;
 
         // Default stroke weight
-        private double strokeThickness = 10;
+        private double strokeThickness = 40;
 
         #endregion Fields
 
@@ -96,7 +96,8 @@ namespace DXFViewer
         private static void OnFilenameChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var instance = (d as Viewer);
-            instance.LoadBackground();
+            instance.LoadBackgroundGeometries();
+            //instance.LoadBackground();
         }
 
         private void LoadBackground()
@@ -112,6 +113,38 @@ namespace DXFViewer
             }
         }
 
+        private void LoadBackgroundGeometries()
+        {
+            canvas.Children.Clear();
+            var dxf = this.ConvertDxfToGeometries(FileName);
+            if (dxf.Document != null)
+            {
+                drawingExtendsUpperRight = dxf.Document.Header.DrawingExtendsUpperRight;
+                drawingExtendsLowerRight = dxf.Document.Header.DrawingExtendsLowerRight;
+                canvas.Children.Add(dxf.Canvas);
+                ZoomExtents();
+            }
+        }
+
+        private (DXFDocument Document, Canvas Canvas) ConvertDxfToGeometries(string fileName)
+        {
+            Canvas childCanvas = new Canvas();
+            var (Document, Path) = DxfConversionHelpers.LoadDxfGeometries(fileName);
+
+            //Path.StrokeThickness = 20;
+
+            Binding bindingStrokeThickness = new Binding(nameof(StrokeThickness)) { Source = this, Mode = BindingMode.OneWay, ValidatesOnDataErrors = false, ValidatesOnExceptions = false, ValidatesOnNotifyDataErrors = false };
+            Path.DataContext = this;
+            Path.SetBinding(Shape.StrokeThicknessProperty, bindingStrokeThickness);
+
+            childCanvas.Children.Add(Path);
+            childCanvas.RenderTransform = new ScaleTransform(ScaleX, ScaleY);
+            childCanvas.RenderTransformOrigin = new Point(0.5, 0.5);
+
+            return (Document, childCanvas);
+        }
+
+
         private (DXFDocument Document, Canvas Canvas) ConvertDxf(string fileName)
         {
             Canvas childCanvas = new Canvas();
@@ -120,9 +153,10 @@ namespace DXFViewer
             // Add it to canvas                    
             foreach (Shape shape in Shapes)
             {
-                Binding bindingStrokeThickness = new Binding(nameof(StrokeThickness)) { Source = this, Mode = BindingMode.OneWay, ValidatesOnDataErrors = false, ValidatesOnExceptions = false, ValidatesOnNotifyDataErrors = false };
-                shape.DataContext = this;
-                shape.SetBinding(Shape.StrokeThicknessProperty, bindingStrokeThickness);
+                shape.StrokeThickness = strokeThickness;
+                //Binding bindingStrokeThickness = new Binding(nameof(StrokeThickness)) { Source = this, Mode = BindingMode.OneWay, ValidatesOnDataErrors = false, ValidatesOnExceptions = false, ValidatesOnNotifyDataErrors = false };
+                //shape.DataContext = this;
+                //shape.SetBinding(Shape.StrokeThicknessProperty, bindingStrokeThickness);
 
                 childCanvas.Children.Add(shape);
             }
