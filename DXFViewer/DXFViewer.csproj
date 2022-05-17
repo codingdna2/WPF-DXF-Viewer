@@ -6,7 +6,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/codingdna2/WPF-DXF-Viewer</RepositoryUrl>
     <Description>UserControl to visualize a DXF over a Canvas in WPF</Description>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>

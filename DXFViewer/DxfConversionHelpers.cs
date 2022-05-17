@@ -612,7 +612,7 @@ namespace DXFViewer
                     foreach (DXFEntity entity in document.Entities)
                         ConvertDxfEntityToGeometries(document, entity, geometries);
 
-                    Debug.WriteLine("Created shapes in {0}ms", DateTime.UtcNow.Subtract(start).TotalMilliseconds);
+                    Debug.WriteLine("Created geometries in {0}ms", DateTime.UtcNow.Subtract(start).TotalMilliseconds);
 
                     GeometryGroup group = new GeometryGroup();
                     foreach (var geometry in geometries)

@@ -153,10 +153,11 @@ namespace DXFViewer
             // Add it to canvas                    
             foreach (Shape shape in Shapes)
             {
-                shape.StrokeThickness = strokeThickness;
-                //Binding bindingStrokeThickness = new Binding(nameof(StrokeThickness)) { Source = this, Mode = BindingMode.OneWay, ValidatesOnDataErrors = false, ValidatesOnExceptions = false, ValidatesOnNotifyDataErrors = false };
-                //shape.DataContext = this;
-                //shape.SetBinding(Shape.StrokeThicknessProperty, bindingStrokeThickness);
+                //shape.StrokeThickness = strokeThickness;
+
+                Binding bindingStrokeThickness = new Binding(nameof(StrokeThickness)) { Source = this, Mode = BindingMode.OneWay, ValidatesOnDataErrors = false, ValidatesOnExceptions = false, ValidatesOnNotifyDataErrors = false };
+                shape.DataContext = this;
+                shape.SetBinding(Shape.StrokeThicknessProperty, bindingStrokeThickness);
 
                 childCanvas.Children.Add(shape);
             }
