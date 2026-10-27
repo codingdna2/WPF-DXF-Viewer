@@ -1,4 +1,4 @@
-﻿using DXFLib;
+using DXFLib;
 using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -174,12 +174,13 @@ namespace DXFViewer
 
         public void ZoomExtents()
         {
-            if (canvas.Children.Count == 0 || drawingExtendsLowerRight == null || drawingExtendsUpperRight == null) return;
+            if (canvas.Children.Count == 0) return;
 
-            double xMin = Math.Min(drawingExtendsLowerRight.X.Value * ScaleX, drawingExtendsUpperRight.X.Value * ScaleX);  
-            double xMax = Math.Max(drawingExtendsLowerRight.X.Value * ScaleX, drawingExtendsUpperRight.X.Value * ScaleX);  
-            double yMin = Math.Min(drawingExtendsUpperRight.Y.Value * -ScaleY, drawingExtendsLowerRight.Y.Value * -ScaleY); 
-            double yMax = Math.Max(drawingExtendsUpperRight.Y.Value * -ScaleY, drawingExtendsLowerRight.Y.Value * -ScaleY);
+            double xMin, xMax, yMin, yMax;
+
+            if (!TryGetHeaderExtents(out xMin, out xMax, out yMin, out yMax) &&
+                !TryGetContentExtents(out xMin, out xMax, out yMin, out yMax))
+                return;
 
             // Calculate scale
             double scale = Math.Min(canvas.ActualWidth / (xMax - xMin), canvas.ActualHeight / (yMax - yMin)) * zoomExtentsFactor;
@@ -197,6 +198,89 @@ namespace DXFViewer
 
                 StrokeThickness = 1 / canvas.Scale;
             }
+        }
+
+        /// <summary>
+        /// Gets the drawing extents from the DXF header. Returns false when the header
+        /// has no usable extents.
+        /// </summary>
+        private bool TryGetHeaderExtents(out double xMin, out double xMax, out double yMin, out double yMax)
+        {
+            xMin = xMax = yMin = yMax = 0;
+
+            if (drawingExtendsLowerRight == null || drawingExtendsUpperRight == null) return false;
+
+            double? lowerX = drawingExtendsLowerRight.X;
+            double? lowerY = drawingExtendsLowerRight.Y;
+            double? upperX = drawingExtendsUpperRight.X;
+            double? upperY = drawingExtendsUpperRight.Y;
+
+            if (!lowerX.HasValue || !lowerY.HasValue || !upperX.HasValue || !upperY.HasValue) return false;
+
+            if (!IsUsableExtent(lowerX.Value) || !IsUsableExtent(lowerY.Value) ||
+                !IsUsableExtent(upperX.Value) || !IsUsableExtent(upperY.Value))
+                return false;
+
+            xMin = Math.Min(lowerX.Value * ScaleX, upperX.Value * ScaleX);
+            xMax = Math.Max(lowerX.Value * ScaleX, upperX.Value * ScaleX);
+            yMin = Math.Min(upperY.Value * -ScaleY, lowerY.Value * -ScaleY);
+            yMax = Math.Max(upperY.Value * -ScaleY, lowerY.Value * -ScaleY);
+
+            return xMax > xMin && yMax > yMin;
+        }
+
+        /// <summary>
+        /// Gets the drawing extents from the geometry currently drawn on the canvas.
+        /// Returns false when nothing has been drawn.
+        /// </summary>
+        private bool TryGetContentExtents(out double xMin, out double xMax, out double yMin, out double yMax)
+        {
+            xMin = xMax = yMin = yMax = 0;
+            Rect contentBounds = Rect.Empty;
+
+            foreach (UIElement child in canvas.Children)
+            {
+                Canvas childCanvas = child as Canvas;
+                if (childCanvas == null) continue;
+
+                foreach (UIElement grandChild in childCanvas.Children)
+                {
+                    Shape shape = grandChild as Shape;
+                    if (shape == null) continue;
+
+                    Rect shapeBounds = shape.RenderedGeometry == null ? Rect.Empty : shape.RenderedGeometry.Bounds;
+                    if (shapeBounds.IsEmpty) continue;
+
+                    Transform transform = shape.RenderTransform;
+                    if (transform != null && !transform.Value.IsIdentity)
+                        shapeBounds = transform.TransformBounds(shapeBounds);
+
+                    contentBounds.Union(shapeBounds);
+                }
+            }
+
+            if (contentBounds.IsEmpty) return false;
+
+            xMin = contentBounds.Left;
+            xMax = contentBounds.Right;
+            yMin = contentBounds.Top;
+            yMax = contentBounds.Bottom;
+
+            // Flat geometry has no extent on one axis; give it a unit of padding.
+            if (xMax <= xMin) { xMin -= 1; xMax += 1; }
+            if (yMax <= yMin) { yMin -= 1; yMax += 1; }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Returns whether an extent value is a real coordinate rather than a sentinel.
+        /// </summary>
+        private static bool IsUsableExtent(double extent)
+        {
+            const double maxPlausibleExtent = 1.0E+15;
+
+            return !double.IsNaN(extent) && !double.IsInfinity(extent) && Math.Abs(extent) < maxPlausibleExtent;
         }
 
         public void ZoomIn()
