@@ -1,4 +1,4 @@
-using DXFLib;
+﻿using DXFLib;
 using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -104,7 +104,7 @@ namespace DXFViewer
         {
             canvas.Children.Clear();
             var dxf = this.ConvertDxf(FileName);
-            if (dxf.Document != null)
+            if (dxf.Document != null && dxf.Canvas != null)
             {
                 drawingExtendsUpperRight = dxf.Document.Header.DrawingExtendsUpperRight;
                 drawingExtendsLowerRight = dxf.Document.Header.DrawingExtendsLowerRight;
@@ -117,7 +117,7 @@ namespace DXFViewer
         {
             canvas.Children.Clear();
             var dxf = this.ConvertDxfToGeometries(FileName);
-            if (dxf.Document != null)
+            if (dxf.Document != null && dxf.Canvas != null)
             {
                 drawingExtendsUpperRight = dxf.Document.Header.DrawingExtendsUpperRight;
                 drawingExtendsLowerRight = dxf.Document.Header.DrawingExtendsLowerRight;
@@ -131,7 +131,7 @@ namespace DXFViewer
             Canvas childCanvas = new Canvas();
             var (Document, Path) = DxfConversionHelpers.LoadDxfGeometries(fileName);
 
-            //Path.StrokeThickness = 20;
+            if (Path == null) return (null, null);
 
             Binding bindingStrokeThickness = new Binding(nameof(StrokeThickness)) { Source = this, Mode = BindingMode.OneWay, ValidatesOnDataErrors = false, ValidatesOnExceptions = false, ValidatesOnNotifyDataErrors = false };
             Path.DataContext = this;

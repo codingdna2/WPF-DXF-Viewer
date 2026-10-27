@@ -54,7 +54,6 @@
             ClipToBounds="True">
             <dxf:Viewer
                 x:Name="viewer"
-                FileName="DXF/heart.dxf"
                 PanEnabled="{Binding IsChecked, ElementName=btnPan}" />
         </Grid>
 
