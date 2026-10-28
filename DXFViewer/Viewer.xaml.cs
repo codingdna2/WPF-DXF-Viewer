@@ -8,6 +8,7 @@ using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace DXFViewer
 {
@@ -37,6 +38,10 @@ namespace DXFViewer
 
         // Default stroke weight
         private double strokeThickness = 40;
+
+        // Set when ZoomExtents is requested before the canvas has a viewport size;
+        // the pending fit is applied on the next layout pass.
+        private bool zoomExtentsPending;
 
         #endregion Fields
 
@@ -109,7 +114,7 @@ namespace DXFViewer
                 drawingExtendsUpperRight = dxf.Document.Header.DrawingExtendsUpperRight;
                 drawingExtendsLowerRight = dxf.Document.Header.DrawingExtendsLowerRight;
                 canvas.Children.Add(dxf.Canvas);
-                ZoomExtents();
+                ZoomExtentsWhenReady();
             }
         }
 
@@ -122,8 +127,27 @@ namespace DXFViewer
                 drawingExtendsUpperRight = dxf.Document.Header.DrawingExtendsUpperRight;
                 drawingExtendsLowerRight = dxf.Document.Header.DrawingExtendsLowerRight;
                 canvas.Children.Add(dxf.Canvas);
-                ZoomExtents();
+                ZoomExtentsWhenReady();
             }
+        }
+
+        /// <summary>
+        /// Centres the newly loaded drawing. Loading runs before the canvas has been laid out,
+        /// so the fit is deferred to the next layout pass when that is the case.
+        /// </summary>
+        private void ZoomExtentsWhenReady()
+        {
+            if (HasViewport())
+            {
+                ZoomExtents();
+                return;
+            }
+
+            zoomExtentsPending = true;
+            Dispatcher.BeginInvoke(new Action(() =>
+            {
+                if (zoomExtentsPending) ZoomExtents();
+            }), DispatcherPriority.Loaded);
         }
 
         private (DXFDocument Document, Canvas Canvas) ConvertDxfToGeometries(string fileName)
@@ -174,7 +198,12 @@ namespace DXFViewer
 
         public void ZoomExtents()
         {
-            if (canvas.Children.Count == 0) return;
+            if (canvas == null || canvas.Children.Count == 0) return;
+
+            // The canvas has not been laid out yet, so there is no viewport to fit into and
+            // the geometry has no rendered bounds either. Defer until layout gives us a size;
+            // OnRenderSizeChanged calls us again once it does.
+            if (!HasViewport()) { zoomExtentsPending = true; return; }
 
             double xMin, xMax, yMin, yMax;
 
@@ -182,22 +211,48 @@ namespace DXFViewer
                 !TryGetContentExtents(out xMin, out xMax, out yMin, out yMax))
                 return;
 
+            ApplyZoomExtents(xMin, xMax, yMin, yMax);
+        }
+
+        /// <summary>
+        /// Returns whether the canvas has a usable viewport size.
+        /// </summary>
+        private bool HasViewport()
+        {
+            return canvas.ActualWidth > 0 && canvas.ActualHeight > 0 &&
+                   !double.IsInfinity(canvas.ActualWidth) && !double.IsInfinity(canvas.ActualHeight);
+        }
+
+        /// <summary>
+        /// Fits the given extents into the canvas and centres them.
+        /// </summary>
+        private void ApplyZoomExtents(double xMin, double xMax, double yMin, double yMax)
+        {
+            // Guard against a degenerate extent (e.g. a single horizontal line): a zero span
+            // would divide by zero and produce an infinite or NaN scale.
+            if (xMax <= xMin) { xMin -= 0.5; xMax += 0.5; }
+            if (yMax <= yMin) { yMin -= 0.5; yMax += 0.5; }
+
+            double width = xMax - xMin;
+            double height = yMax - yMin;
+
             // Calculate scale
-            double scale = Math.Min(canvas.ActualWidth / (xMax - xMin), canvas.ActualHeight / (yMax - yMin)) * zoomExtentsFactor;
-            if (scale > 0 && !double.IsInfinity(scale))
-            {
-                // Adjust scale
-                canvas.Scale = scale;
+            double scale = Math.Min(canvas.ActualWidth / width, canvas.ActualHeight / height) * zoomExtentsFactor;
+            if (!(scale > 0) || double.IsInfinity(scale)) return;
 
-                // Adjust offset
-                Point generalOffset = new Point(xMin * scale - (canvas.ActualWidth - (xMax - xMin) * scale) / 2,
-                    yMin * scale - (canvas.ActualHeight - ((yMax - yMin) * scale)) / 2);
+            // Adjust scale
+            canvas.Scale = scale;
 
-                canvas.Offset = canvas.LayoutTransform.Transform(generalOffset);
-                NotifyPropertyChanged(nameof(Offset));
+            // Adjust offset so the extents are centred on the canvas
+            Point generalOffset = new Point(xMin * scale - (canvas.ActualWidth - width * scale) / 2,
+                yMin * scale - (canvas.ActualHeight - height * scale) / 2);
 
-                StrokeThickness = 1 / canvas.Scale;
-            }
+            canvas.Offset = canvas.LayoutTransform.Transform(generalOffset);
+            NotifyPropertyChanged(nameof(Offset));
+
+            StrokeThickness = 1 / canvas.Scale;
+
+            zoomExtentsPending = false;
         }
 
         /// <summary>
@@ -248,7 +303,15 @@ namespace DXFViewer
                     Shape shape = grandChild as Shape;
                     if (shape == null) continue;
 
-                    Rect shapeBounds = shape.RenderedGeometry == null ? Rect.Empty : shape.RenderedGeometry.Bounds;
+                    // RenderedGeometry is only populated once the shape has been measured, so
+                    // fall back to the path data. That lets extents be computed before the
+                    // first layout pass, which is when a load happens.
+                    Geometry geometry = shape.RenderedGeometry;
+                    if (geometry == null || geometry.Bounds.IsEmpty)
+                        geometry = GetShapeGeometry(shape);
+                    if (geometry == null) continue;
+
+                    Rect shapeBounds = geometry.Bounds;
                     if (shapeBounds.IsEmpty) continue;
 
                     Transform transform = shape.RenderTransform;
@@ -271,6 +334,18 @@ namespace DXFViewer
             if (yMax <= yMin) { yMin -= 1; yMax += 1; }
 
             return true;
+        }
+
+        /// <summary>
+        /// Returns the geometry of a shape without relying on it having been measured yet.
+        /// </summary>
+        private static Geometry GetShapeGeometry(Shape shape)
+        {
+            Path path = shape as Path;
+            if (path != null) return path.Data;
+
+            // Any other Shape type has no data we can read before layout.
+            return null;
         }
 
         /// <summary>
