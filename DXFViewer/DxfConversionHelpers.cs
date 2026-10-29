@@ -1,4 +1,4 @@
-﻿using DXFLib;
+using DXFLib;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -333,7 +333,7 @@ namespace DXFViewer
 
         internal static EllipseGeometry CreateCircleGeometry(DXFCircle circle)
         {
-            Point center = new Point((double)circle.Center.X, (double)circle.Center.Y);
+            Point center = new Point((double)circle.Center.X, -(double)circle.Center.Y);
             EllipseGeometry drawCircle = new EllipseGeometry
             {
                 RadiusX = circle.Radius,
